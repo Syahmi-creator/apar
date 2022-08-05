@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\File;
+use App\Models\Image;
+
+
+class HomeController extends Controller
+{
+    public function redirectLogin()
+    {
+        return redirect('/login');
+    }
+
+    public function file()
+    {
+        $files = File::where('user_id', Auth()->id())->get();
+
+        return view('file', compact('files'));
+    }
+
+    public function getDelete()
+    {
+        $files = File::where('user_id', Auth()->id())->get();
+
+        return view('delete', compact('files'));
+    }
+
+    public function manage()
+    {
+        $images = Image::all();
+        // dd($images);
+
+        return view('manage', compact('images'));
+    }
+
+    public function dashboard()
+    {
+        $images = Image::all();
+
+        return view('dashboard', compact('images'));
+    }
+}
