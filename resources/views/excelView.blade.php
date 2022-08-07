@@ -47,78 +47,82 @@
                     </thead>
                     <tbody>
 
-
+                        //haah... kitew link kan dekat file sbb file ada user id
                             @foreach ($students as $student)
-                                <tr>
-                                    <td class="border text-center">{{ $student->no }}</td>
-                                    <td class="border">{{ $student->name }}</td>
-                                    <td class="border text-center">{{ $student->course }}</td>
-                                    <td class="border text-center">{{ $student->program }}</td>
-                                    <td class="border text-center">{{ $student->year }}</td>
-                                    <td class="border">{{ $student->lecturer }}</td>
-                                    <td class="border text-center">{{ $student->session }}</td>
-                                    <td class="border text-center">{{ $student->sem }}</td>
-                                    <td class="border text-center">{{ $student->section }}</td>
-                                    <td class="border text-center">{{ $student->IC }}</td>
-                                    <td class="border text-center">{{ $student->matric }}</td>
-                                    <td class="border text-center">
-                                        @if ($student->PO1 != 0.0)
-                                            {{ $student->PO1 }}
-                                        @endif
-                                    </td>
-                                    <td class="border text-center">
-                                        @if ($student->PO2 != 0.0)
-                                            {{ $student->PO2 }}
-                                        @endif
-                                    </td>
-                                    <td class="border text-center">
-                                        @if ($student->PO3 != 0.0)
-                                            {{ $student->PO3 }}
-                                        @endif
-                                    </td>
-                                    <td class="border text-center">
-                                        @if ($student->PO4 != 0.0)
-                                            {{ $student->PO4 }}
-                                        @endif
-                                    </td>
-                                    <td class="border text-center">
-                                        @if ($student->PO5 != 0.0)
-                                            {{ $student->PO5 }}
-                                        @endif
-                                    </td>
-                                    <td class="border text-center">
-                                        @if ($student->PO6 != 0.0)
-                                            {{ $student->PO6 }}
-                                        @endif
-                                    </td>
-                                    <td class="border text-center">
-                                        @if ($student->PO7 != 0.0)
-                                            {{ $student->PO7 }}
-                                        @endif
-                                    </td>
-                                    <td class="border text-center">
-                                        @if ($student->PO8 != 0.0)
-                                            {{ $student->PO8 }}
-                                        @endif
-                                    </td>
-                                    <td class="border text-center">
-                                        @if ($student->PO9 != 0.0)
-                                            {{ $student->PO9 }}
-                                        @endif
-                                    </td>
-                                    <td class="border text-center">
-                                        @if ($student->PO10 != 0.0)
-                                            {{ $student->PO10 }}
-                                        @endif
-                                    </td>
-                                    <td class="border"></td>
-                                    <td class="border"></td>
-                                    <td class="border"></td>
-                                    <td class="border"></td>
-                                    <td class="border"></td>
-                                    <td class="border"></td>
-                                    <td class="border"></td>
-                                </tr>
+                                @if(isset($student->file)) //yg ni utk check data student tu ada link tak dgn file
+                                    @if($student->file->user_id == Auth()->id()) // yg ni pulak match kan data tu dgn tuan pye id
+                                        <tr>
+                                            <td class="border text-center">{{ $student->no }}</td>
+                                            <td class="border">{{ $student->name }}</td>
+                                            <td class="border text-center">{{ $student->course }}</td>
+                                            <td class="border text-center">{{ $student->program }}</td>
+                                            <td class="border text-center">{{ $student->year }}</td>
+                                            <td class="border">{{ $student->lecturer }}</td>
+                                            <td class="border text-center">{{ $student->session }}</td>
+                                            <td class="border text-center">{{ $student->sem }}</td>
+                                            <td class="border text-center">{{ $student->section }}</td>
+                                            <td class="border text-center">{{ $student->IC }}</td>
+                                            <td class="border text-center">{{ $student->matric }}</td>
+                                            <td class="border text-center">
+                                                @if ($student->PO1 != 0.0)
+                                                    {{ $student->PO1 }}
+                                                @endif
+                                            </td>
+                                            <td class="border text-center">
+                                                @if ($student->PO2 != 0.0)
+                                                    {{ $student->PO2 }}
+                                                @endif
+                                            </td>
+                                            <td class="border text-center">
+                                                @if ($student->PO3 != 0.0)
+                                                    {{ $student->PO3 }}
+                                                @endif
+                                            </td>
+                                            <td class="border text-center">
+                                                @if ($student->PO4 != 0.0)
+                                                    {{ $student->PO4 }}
+                                                @endif
+                                            </td>
+                                            <td class="border text-center">
+                                                @if ($student->PO5 != 0.0)
+                                                    {{ $student->PO5 }}
+                                                @endif
+                                            </td>
+                                            <td class="border text-center">
+                                                @if ($student->PO6 != 0.0)
+                                                    {{ $student->PO6 }}
+                                                @endif
+                                            </td>
+                                            <td class="border text-center">
+                                                @if ($student->PO7 != 0.0)
+                                                    {{ $student->PO7 }}
+                                                @endif
+                                            </td>
+                                            <td class="border text-center">
+                                                @if ($student->PO8 != 0.0)
+                                                    {{ $student->PO8 }}
+                                                @endif
+                                            </td>
+                                            <td class="border text-center">
+                                                @if ($student->PO9 != 0.0)
+                                                    {{ $student->PO9 }}
+                                                @endif
+                                            </td>
+                                            <td class="border text-center">
+                                                @if ($student->PO10 != 0.0)
+                                                    {{ $student->PO10 }}
+                                                @endif
+                                            </td>
+                                            <td class="border"></td>
+                                            <td class="border"></td>
+                                            <td class="border"></td>
+                                            <td class="border"></td>
+                                            <td class="border"></td>
+                                            <td class="border"></td>
+                                            <td class="border"></td>
+                                        </tr>
+                                    @endif
+                                @endif
                             @endforeach
 
                     </tbody>

@@ -37,11 +37,16 @@ class Student extends Model
         'po9',
         'po10',
         'file_id',
+        'user_id'
     ];
 
     public function courses()
     {
         return $this->hasMany(Course::class);
+    }
+
+    public function file(){
+        return $this->hasOne(File::class, 'id', 'file_id');
     }
 
 }

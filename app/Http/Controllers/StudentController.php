@@ -13,6 +13,8 @@ class StudentController extends Controller
     {
         $user_id = Auth::id();
         $students = Student::latest()->paginate(10);
+        // dd($students[0]->file->user_id);
+        // $students = Student::latest()->paginate(10);
         return view('excelView', compact('students','user_id'));
     }
      public function resultStudentData()

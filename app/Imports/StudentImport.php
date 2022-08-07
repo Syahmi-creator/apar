@@ -45,6 +45,7 @@ class StudentImport implements ToModel
             'po9' => $row[19],
             'po10' => $row[20],
             'file_id' => $this->fileId,
+            'user_id' => Auth()->id()
             // 'user_id' => $this->userId,
         ]);
     }
