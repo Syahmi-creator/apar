@@ -36,7 +36,7 @@
                 </div>
                 @endif --}}
 
-            @if (Auth()->id()) route ke navigation ni kat mana ea controller dia? ook BENTAR
+            @if (Auth()->id())
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <x-nav-link :href="route('excelView')" :active="request()->routeIs('excelView')">
                     {{ __('Excel Preview') }}
