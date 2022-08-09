@@ -39,8 +39,8 @@ Route::get('/manage', [HomeController::class, 'manage'])->middleware(['auth'])->
 Route::post('/upload-image', [FileController::class, 'imageUpload'])->middleware(['auth'])->name('imageUpload');
 
 Route::prefix('{file}')->middleware(['auth'])->group(function () {
-    Route::post('/show', [ExcelController::class, 'show'])->name('show');
-    Route::post('/export', [ExcelController::class, 'export'])->name('export');
+    Route::get('/show', [ExcelController::class, 'show'])->name('show');
+    Route::get('/export', [ExcelController::class, 'export'])->name('export');
 });
 
 Route::get('/excelView', [StudentController::class, 'excelView'])->middleware(['auth'])->name('excelView');
