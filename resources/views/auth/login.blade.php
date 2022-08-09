@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <img src="{{ asset('storage/UTM-LOGO.png') }}" />
+            <img src="{{ asset('public/UTM-LOGO.png') }}" />
             {{-- <a href="/storage/UTM-LOGO.png">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a> --}}
