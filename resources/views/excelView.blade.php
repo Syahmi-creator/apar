@@ -36,21 +36,21 @@
                             <th class="border">PO8</th>
                             <th class="border">PO9</th>
                             <th class="border">P10</th>
-                            <th class="border"></th>
+                            {{-- <th class="border"></th>
                             <th class="border">Menu Year</th>
                             <th class="border">Menu Sem</th>
                             <th class="border"></th>
                             <th class="border">Cohort</th>
                             <th class="border">Intake</th>
-                            <th class="border">Status</th>
+                            <th class="border">Status</th> --}}
                         </tr>
                     </thead>
                     <tbody>
 
-                        //haah... kitew link kan dekat file sbb file ada user id
+
                             @foreach ($students as $student)
-                                @if(isset($student->file)) //yg ni utk check data student tu ada link tak dgn file
-                                    @if($student->file->user_id == Auth()->id()) // yg ni pulak match kan data tu dgn tuan pye id
+                                @if(isset($student->file))
+                                    @if($student->file->user_id == Auth()->id())
                                         <tr>
                                             <td class="border text-center">{{ $student->no }}</td>
                                             <td class="border">{{ $student->name }}</td>
