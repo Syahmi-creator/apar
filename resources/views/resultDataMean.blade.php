@@ -32,6 +32,7 @@
                 </thead>
                 <tbody>
                     @foreach ($courses as $course1)
+                        @if($course1->students->where('user_id', Auth()->id())->count() > 0))
                         <tr>
                             <td class="border text-center">{{ $loop->iteration }}</td>
                             <td class="border text-center">{{ $course1->year_offer }}</td>
@@ -45,10 +46,10 @@
                                 foreach ($course1->students as $student) {
                                     $PO1 += $student->PO1;
                                 }
-                                if($course1->students->where('PO1', '>', 0)->count() == 0){
+                                if($course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count() == 0){
                                     $avg1 = 0;
                                 }else{
-                                    $avg1 = $PO1 / $course1->students->where('PO1', '>', 0)->count();
+                                    $avg1 = $PO1 / $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
                                 }
                             @endphp
                             {{ number_format($avg1,2) }}</td>
