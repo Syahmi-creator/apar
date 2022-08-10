@@ -47,12 +47,12 @@
                     </thead>
                     <tbody>
 
-
+                        @php $i = 1;
                             @foreach ($students as $student)
                                 @if(isset($student->file))
                                     @if($student->file->user_id == Auth()->id())
                                         <tr>
-                                            <td class="border text-center">{{ $student->firstItem()+$loop->index }}</td>
+                                            <td class="border text-center">{{ $i++ }}</td>
                                             <td class="border">{{ $student->name }}</td>
                                             <td class="border text-center">{{ $student->course }}</td>
                                             <td class="border text-center">{{ $student->program }}</td>
