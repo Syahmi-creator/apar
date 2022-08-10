@@ -113,13 +113,13 @@
                                                     {{ $student->PO10 }}
                                                 @endif
                                             </td>
+                                            {{-- <td class="border"></td>
                                             <td class="border"></td>
                                             <td class="border"></td>
                                             <td class="border"></td>
                                             <td class="border"></td>
                                             <td class="border"></td>
-                                            <td class="border"></td>
-                                            <td class="border"></td>
+                                            <td class="border"></td> --}}
                                         </tr>
                                     @endif
                                 @endif
