@@ -15,6 +15,7 @@ class Student extends Model
     }
 
     protected $fillable = [
+        'id',
         'no',
         'name',
         'course',
@@ -26,16 +27,16 @@ class Student extends Model
         'section',
         'IC',
         'matric',
-        'po1',
-        'po2',
-        'po3',
-        'po4',
-        'po5',
-        'po6',
-        'po7',
-        'po8',
-        'po9',
-        'po10',
+        'PO1',
+        'PO2',
+        'PO3',
+        'PO4',
+        'PO5',
+        'PO6',
+        'PO7',
+        'PO8',
+        'PO9',
+        'PO10',
         'file_id',
         'user_id'
     ];
