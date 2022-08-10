@@ -38,6 +38,7 @@ class CreateStudentsTable extends Migration
             $table->decimal('PO9')->nullable();
             $table->decimal('PO10')->nullable();
             $table->foreignId('file_id')->nullable();
+            $table->foreignId('user_id')->nullable();
             $table->timestamps();
         });
     }
