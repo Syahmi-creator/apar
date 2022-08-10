@@ -24,7 +24,7 @@ class Student extends Model
         'session',
         'sem',
         'section',
-        'ic',
+        'IC',
         'matric',
         'po1',
         'po2',
