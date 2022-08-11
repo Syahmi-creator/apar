@@ -69,53 +69,53 @@
                                             <td class="border text-center">{{ $student->IC }}</td>
                                             <td class="border text-center">{{ $student->matric }}</td>
                                             <td class="border text-center">
-                                                @if ($student->po1 != 0.0)
-                                                    {{ $student->po1 }}
+                                                @if ($student->PO1 != 0.0)
+                                                    {{ $student->PO1 }}
                                                 @endif
                                             </td>
                                             <td class="border text-center">
-                                                @if ($student->po2 != 0.0)
-                                                    {{ $student->po2 }}
+                                                @if ($student->PO2 != 0.0)
+                                                    {{ $student->PO2 }}
                                                 @endif
                                             </td>
                                             <td class="border text-center">
-                                                @if ($student->po3 != 0.0)
-                                                    {{ $student->po3 }}
+                                                @if ($student->PO3 != 0.0)
+                                                    {{ $student->PO3 }}
                                                 @endif
                                             </td>
                                             <td class="border text-center">
-                                                @if ($student->po4 != 0.0)
-                                                    {{ $student->po4 }}
+                                                @if ($student->PO4 != 0.0)
+                                                    {{ $student->PO4 }}
                                                 @endif
                                             </td>
                                             <td class="border text-center">
-                                                @if ($student->po5 != 0.0)
-                                                    {{ $student->po5 }}
+                                                @if ($student->PO5 != 0.0)
+                                                    {{ $student->PO5 }}
                                                 @endif
                                             </td>
                                             <td class="border text-center">
-                                                @if ($student->po6 != 0.0)
-                                                    {{ $student->po6 }}
+                                                @if ($student->PO6 != 0.0)
+                                                    {{ $student->PO6 }}
                                                 @endif
                                             </td>
                                             <td class="border text-center">
-                                                @if ($student->po7 != 0.0)
-                                                    {{ $student->po7 }}
+                                                @if ($student->PO7 != 0.0)
+                                                    {{ $student->PO7 }}
                                                 @endif
                                             </td>
                                             <td class="border text-center">
-                                                @if ($student->po8 != 0.0)
-                                                    {{ $student->po8 }}
+                                                @if ($student->PO8 != 0.0)
+                                                    {{ $student->PO8 }}
                                                 @endif
                                             </td>
                                             <td class="border text-center">
-                                                @if ($student->po9 != 0.0)
-                                                    {{ $student->po9 }}
+                                                @if ($student->PO9 != 0.0)
+                                                    {{ $student->PO9 }}
                                                 @endif
                                             </td>
                                             <td class="border text-center">
-                                                @if ($student->po10 != 0.0)
-                                                    {{ $student->po10 }}
+                                                @if ($student->PO10 != 0.0)
+                                                    {{ $student->PO10 }}
                                                 @endif
                                             </td>
                                             {{-- <td class="border"></td>
