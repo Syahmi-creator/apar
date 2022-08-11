@@ -66,7 +66,7 @@
                                             <td class="border text-center">{{ $student->session }}</td>
                                             <td class="border text-center">{{ $student->sem }}</td>
                                             <td class="border text-center">{{ $student->section }}</td>
-                                            <td class="border text-center">{{ dump($student->IC) }}</td>
+                                            <td class="border text-center">{{ $student->IC }}</td>
                                             <td class="border text-center">{{ $student->matric }}</td>
                                             <td class="border text-center">
                                                 @if ($student->po1 != 0.0)
