@@ -32,7 +32,7 @@
                 </thead>
                 <tbody>
                     @foreach ($courses as $course1)
-                        @if($course1->students->where('user_id', Auth()->id())->count() > 0))
+                        @if($course1->students->where('user_id', Auth()->id())->count() > 0)
                         <tr>
                             <td class="border text-center">{{ $loop->iteration }}</td>
                             <td class="border text-center">{{ $course1->year_offer }}</td>
@@ -162,6 +162,7 @@
                             @endphp
                             {{ number_format($avg10,2) }}</td>
                         </tr>
+                        @endif
                     @endforeach
                 </tbody>
             </table>
