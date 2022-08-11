@@ -55,7 +55,7 @@
                                     @if($student->file->user_id == Auth()->id())
                                         <tr>
                                             <td class="border text-center">
-                                                <th scope="row">{{i++}}</th>
+                                                <th scope="row">{{$i++}}</th>
                                                 </td>
                                             <td class="border">{{ $student->name }}</td>
                                             <td class="border text-center">{{ $student->course }}</td>
