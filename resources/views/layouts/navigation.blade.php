@@ -60,7 +60,7 @@
             </div>
             @endif
 
-            @if (Auth()->id()==1)
+            @if (Auth()->id())
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <x-nav-link :href="route('resultDataPass')" :active="request()->routeIs('resultDataPass')">
                     {{ __('KPI Passed') }}
