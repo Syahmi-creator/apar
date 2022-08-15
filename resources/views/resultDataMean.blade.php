@@ -320,7 +320,7 @@
                     @if ($course1->students->where('user_id', Auth()->id()))
                         <tr>
                             <td class="border text-center">
-                                @php($i = 1) @endphp
+                                @php($i = 1)
                                 {{ $i++ }}</td>
                             <td class="border text-center">{{ $course1->year_offer }}</td>
                             <td class="border text-center">{{ $course1->semester_offer }}</td>
