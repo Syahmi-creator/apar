@@ -4,9 +4,10 @@
             {{ __('Number of Student Data') }}
         </h2>
     </x-slot>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <br>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <div class="container">
         <div class="overflow-scroll">
             <table class="table table-responsive-center">
@@ -33,39 +34,50 @@
                     </tr>
                 </thead>
                 <tbody>
-<<<<<<< HEAD
+
                     @php($i = 1)
                     @foreach ($courses as $course1)
-                        @if($course1->students->where('user_id', Auth()->id())->count() > 0)
-                        <tr>
-                            <td class="border text-center">{{ $i++ }}</td>
-=======
-
-                    @php($i=1)
-                    @foreach ($courses as $course1)
-                        @if($course1->students->where('user_id', Auth()->id())->count() > 0)
-                        <tr>
-                            <td class="border text-center">{{$i++}}</td>
->>>>>>> a0e92ad497348473ca5304f54d35e7289ad464fd
-                            <td class="border text-center">{{ $course1->year_offer }}</td>
-                            <td class="border text-center">{{ $course1->semester_offer }}</td>
-
-                            <td class="border text-center">{{ $course1->course_name}}</td>
-
-                            <td class="border text-center">{{ $course1->course}}</td>
-                            <td class="border text-center">{{ $course1->credit_hour }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO2', '>', 0)->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO3', '>', 0)->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO4', '>', 0)->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO5', '>', 0)->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO6', '>', 0)->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO7', '>', 0)->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO8', '>', 0)->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO9', '>', 0)->count() }}</td>
-                            <td class="border text-center">{{ $course1->students->where('user_id', Auth()->id())->where('PO10', '>', 0)->count() }}</td>
-                        </tr>
+                        @if ($course1->students->where('user_id', Auth()->id())->count() > 0)
+                            <tr>
+                                <td class="border text-center">{{ $i++ }}</td>
+                                <td class="border text-center">{{ $course1->year_offer }}</td>
+                                <td class="border text-center">{{ $course1->semester_offer }}</td>
+                                <td class="border text-center">{{ $course1->course_name }}</td>
+                                <td class="border text-center">{{ $course1->course }}</td>
+                                <td class="border text-center">{{ $course1->credit_hour }}</td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->count() }}</td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count() }}
+                                </td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO2', '>', 0)->count() }}
+                                </td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO3', '>', 0)->count() }}
+                                </td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO4', '>', 0)->count() }}
+                                </td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO5', '>', 0)->count() }}
+                                </td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO6', '>', 0)->count() }}
+                                </td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO7', '>', 0)->count() }}
+                                </td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO8', '>', 0)->count() }}
+                                </td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO9', '>', 0)->count() }}
+                                </td>
+                                <td class="border text-center">
+                                    {{ $course1->students->where('user_id', Auth()->id())->where('PO10', '>', 0)->count() }}
+                                </td>
+                            </tr>
                         @endif
                     @endforeach
                 </tbody>
