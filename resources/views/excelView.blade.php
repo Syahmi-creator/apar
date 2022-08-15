@@ -6,7 +6,7 @@
     </x-slot>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     {{-- <div class="overflow-x-auto"> --}}
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     {{-- <table class="border-collapse border divide-y divide-gray-200">
     <table class="border-collapse border divide-y divide-gray-200"> --}}
     <div class="row">
@@ -37,23 +37,30 @@
                             <th class="border">PO8</th>
                             <th class="border">PO9</th>
                             <th class="border">P10</th>
-                            <th class="border"></th>
+                            {{-- <th class="border"></th>
                             <th class="border">Menu Year</th>
                             <th class="border">Menu Sem</th>
                             <th class="border"></th>
                             <th class="border">Cohort</th>
                             <th class="border">Intake</th>
-                            <th class="border">Status</th>
+                            <th class="border">Status</th> --}}
                         </tr>
                     </thead>
                     <tbody>
 
 
+<<<<<<< HEAD
+=======
+
+                        @php($i=1)
+>>>>>>> a0e92ad497348473ca5304f54d35e7289ad464fd
                             @foreach ($students as $student)
                                 @if(isset($student->file))
                                     @if($student->file->user_id == Auth()->id())
                                         <tr>
-                                            <td class="border text-center">{{ $student->no }}</td>
+                                            <td class="border text-center">
+                                                {{$i++}}
+                                                </td>
                                             <td class="border">{{ $student->name }}</td>
                                             <td class="border text-center">{{ $student->course }}</td>
                                             <td class="border text-center">{{ $student->program }}</td>
@@ -114,13 +121,13 @@
                                                     {{ $student->PO10 }}
                                                 @endif
                                             </td>
+                                            {{-- <td class="border"></td>
                                             <td class="border"></td>
                                             <td class="border"></td>
                                             <td class="border"></td>
                                             <td class="border"></td>
                                             <td class="border"></td>
-                                            <td class="border"></td>
-                                            <td class="border"></td>
+                                            <td class="border"></td> --}}
                                         </tr>
                                     @endif
                                 @endif
@@ -130,7 +137,7 @@
                 </table>
             </div>
             <div class="card">
-                {{ $students->links() }}
+                {!! $students->links() !!}
             </div>
         </div>
     </div>
