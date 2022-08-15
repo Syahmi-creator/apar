@@ -4,6 +4,7 @@
             {{ __('Student Programme Learning Outcome Preview') }}
         </h2>
     </x-slot>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     {{-- <div class="overflow-x-auto"> --}}
 
     {{-- <table class="border-collapse border divide-y divide-gray-200">
@@ -47,10 +48,10 @@
                     </thead>
                     <tbody>
 
-                        //haah... kitew link kan dekat file sbb file ada user id
+
                             @foreach ($students as $student)
-                                @if(isset($student->file)) //yg ni utk check data student tu ada link tak dgn file
-                                    @if($student->file->user_id == Auth()->id()) // yg ni pulak match kan data tu dgn tuan pye id
+                                @if(isset($student->file))
+                                    @if($student->file->user_id == Auth()->id())
                                         <tr>
                                             <td class="border text-center">{{ $student->no }}</td>
                                             <td class="border">{{ $student->name }}</td>
