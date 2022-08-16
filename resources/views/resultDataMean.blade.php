@@ -315,7 +315,7 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- @php($i = 1) --}}
+
                 @foreach ($courses as $course1)
                     @if ($course1->students->where('user_id', Auth()->id())->count() > 0)
                         <tr>
