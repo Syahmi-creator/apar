@@ -336,7 +336,7 @@
                                     }
                                     if (
                                         $course1->students
-
+                                        ->where('user_id', Auth()->id())
                                             ->where('PO1', '>', 0)
                                             ->count() == 0
                                     ) {
@@ -345,20 +345,21 @@
                                         $avg1 =
                                             $PO1 /
                                             $course1->students
-
+                                            ->where('user_id', Auth()->id())
                                                 ->where('PO1', '>', 0)
                                                 ->count();
                                     }
                                 @endphp
                                 {{ number_format($avg1, 2) }}</td>
-                            <td class="border text-center">@php
+                            <td class="border text-center">
+                                @php
                                 $PO2 = 0;
-                                foreach ($course1 as $student) {
+                                foreach ($course1->students as $student) {
                                     $PO2 += $student->PO2;
                                 }
                                 if (
                                     $course1->students
-
+                                    ->where('user_id', Auth()->id())
                                         ->where('PO2', '>', 0)
                                         ->count() == 0
                                 ) {
@@ -367,7 +368,7 @@
                                     $avg2 =
                                         $PO2 /
                                         $course1->students
-
+                                        ->where('user_id', Auth()->id())
                                             ->where('PO2', '>', 0)
                                             ->count();
                                 }
@@ -380,7 +381,7 @@
                                 }
                                 if (
                                     $course1
-
+                                    ->where('user_id', Auth()->id())
                                         ->students->where('PO3', '>', 0)
                                         ->count() == 0
                                 ) {
@@ -389,7 +390,7 @@
                                     $avg3 =
                                         $PO3 /
                                         $course1
-
+                                        ->where('user_id', Auth()->id())
                                             ->students->where('PO3', '>', 0)
                                             ->count();
                                 }
@@ -403,7 +404,7 @@
                                 }
                                 if (
                                     $course1->students
-
+                                    ->where('user_id', Auth()->id())
                                         ->where('PO4', '>', 0)
                                         ->count() == 0
                                 ) {
@@ -412,7 +413,7 @@
                                     $avg4 =
                                         $PO4 /
                                         $course1->students
-
+                                        ->where('user_id', Auth()->id())
                                             ->where('PO4', '>', 0)
                                             ->count();
                                 }
@@ -425,7 +426,7 @@
                                 }
                                 if (
                                     $course1->students
-
+                                    ->where('user_id', Auth()->id())
                                         ->where('PO5', '>', 0)
                                         ->count() == 0
                                 ) {
@@ -434,7 +435,7 @@
                                     $avg5 =
                                         $PO5 /
                                         $course1->students
-
+                                        ->where('user_id', Auth()->id())
                                             ->where('PO5', '>', 0)
                                             ->count();
                                 }
@@ -447,7 +448,7 @@
                                 }
                                 if (
                                     $course1->students
-
+                                    ->where('user_id', Auth()->id())
                                         ->where('PO6', '>', 0)
                                         ->count() == 0
                                 ) {
@@ -456,7 +457,7 @@
                                     $avg6 =
                                         $PO6 /
                                         $course1->students
-
+                                        ->where('user_id', Auth()->id())
                                             ->where('PO6', '>', 0)
                                             ->count();
                                 }
@@ -470,7 +471,7 @@
 
                                 if (
                                     $course1->students
-
+                                    ->where('user_id', Auth()->id())
                                         ->where('PO7', '>', 0)
                                         ->count() == 0
                                 ) {
@@ -479,7 +480,7 @@
                                     $avg7 =
                                         $PO7 /
                                         $course1->students
-
+                                        ->where('user_id', Auth()->id())
                                             ->where('PO7', '>', 0)
                                             ->count();
                                 }
@@ -493,7 +494,7 @@
 
                                 if (
                                     $course1->students
-
+                                    ->where('user_id', Auth()->id())
                                         ->where('PO8', '>', 0)
                                         ->count() == 0
                                 ) {
@@ -502,7 +503,7 @@
                                     $avg8 =
                                         $PO8 /
                                         $course1->students
-
+                                        ->where('user_id', Auth()->id())
                                             ->where('PO8', '>', 0)
                                             ->count();
                                 }
@@ -516,7 +517,7 @@
 
                                 if (
                                     $course1->students
-
+                                    ->where('user_id', Auth()->id())
                                         ->where('PO9', '>', 0)
                                         ->count() == 0
                                 ) {
@@ -525,7 +526,7 @@
                                     $avg9 =
                                         $PO9 /
                                         $course1->students
-
+                                        ->where('user_id', Auth()->id())
                                             ->where('PO9', '>', 0)
                                             ->count();
                                 }
@@ -539,7 +540,7 @@
 
                                 if (
                                     $course1->students
-
+                                    ->where('user_id', Auth()->id())
                                         ->where('PO10', '>', 0)
                                         ->count() == 0
                                 ) {
@@ -548,7 +549,7 @@
                                     $avg10 =
                                         $PO10 /
                                         $course1->students
-
+                                        ->where('user_id', Auth()->id())
                                             ->where('PO10', '>', 0)
                                             ->count();
                                 }
