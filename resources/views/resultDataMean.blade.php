@@ -315,13 +315,13 @@
                 </tr>
             </thead>
             <tbody>
-
+                @php($i = 1)
                 @foreach ($courses as $course1)
-                    @if ($course1->students->where('user_id', Auth()->id()))
+                    @if ($course1->students->where('user_id', Auth()->id())->count() > 0)
                         <tr>
                             <td class="border text-center">
 
-                                {{ 1 }}</td>
+                                {{$i++}}</td>
                             <td class="border text-center">{{ $course1->year_offer }}</td>
                             <td class="border text-center">{{ $course1->semester_offer }}</td>
                             <td class="border text-center">{{ $course1->course_name }}</td>
