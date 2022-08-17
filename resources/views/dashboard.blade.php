@@ -28,8 +28,8 @@
           Information for APAR cohort
         </div>
         <div class="card-body">
-            <form action="{{ route('cohort.store') }}" method="POST">
-                @csrf
+            {{-- <form action="#" method="POST">
+                @csrf --}}
                 <div class="form-group">
                     <label for="graduation_session">Graduation Session:</label>
                     <select class="form-control" name="graduation_session" aria-label="Select Graduation Session" required>
@@ -58,7 +58,7 @@
 
                     <button type="submit" class="btn btn-primary">Submit</button>
 
-            </form>
+            {{-- </form> --}}
         </div>
       </div>
 
