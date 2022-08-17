@@ -57,7 +57,11 @@
                                     }
                                 }
 
-                                $resultPO1 = $PO1/$T_studentPassedPO1;
+                                if(  $T_studentPassedPO1 != 0){
+                                    $resultPO1 = $PO1/$T_studentPassedPO1;
+                                }else{
+                                    $resultPO1 = $PO1;
+                                }
                             @endphp
                                 {{ $resultPO1 }}</td>
                             <td class="border text-center"> @php
@@ -68,7 +72,11 @@
                                         $PO2++;
                                     }
                                 }
-                                $resultPO2 = $PO2/$T_studentPassedPO2;
+                                if(  $T_studentPassedPO2 != 0){
+                                    $resultPO2 = $PO2/$T_studentPassedPO2;
+                                }else{
+                                    $resultPO2 = $PO2;
+                                }
                             @endphp
                                 {{ $resultPO2 }}</td>
 
@@ -80,7 +88,11 @@
                                         $PO3++;
                                     }
                                 }
-                                $resultPO3 = $PO3/$T_studentPassedPO3;
+                                if(  $T_studentPassedPO3 != 0){
+                                    $resultPO3 = $PO3/$T_studentPassedPO3;
+                                }else{
+                                    $resultPO3 = $PO3;
+                                }
                             @endphp
                                 {{ $resultPO3 }}</td>
                             </td>
@@ -92,7 +104,11 @@
                                         $PO4++;
                                     }
                                 }
-                                $resultPO4 = $PO4/$T_studentPassedPO4;
+                                if(  $T_studentPassedPO4 != 0){
+                                    $resultPO4 = $PO4/$T_studentPassedPO4;
+                                }else{
+                                    $resultPO4 = $PO4;
+                                }
                             @endphp
                                 {{ $resultPO4 }}</td>
                             <td class="border text-center">@php
@@ -103,7 +119,11 @@
                                         $PO5++;
                                     }
                                 }
-                                $resultPO5 = $PO5/$T_studentPassedPO5;
+                                if(  $T_studentPassedPO5 != 0){
+                                    $resultPO5 = $PO5/$T_studentPassedPO5;
+                                }else{
+                                    $resultPO5 = $PO5;
+                                }
                             @endphp
                                 {{ $resultPO5 }}</td>
                             <td class="border text-center">@php
@@ -114,7 +134,11 @@
                                         $PO6++;
                                     }
                                 }
-                                $resultPO6 = $PO6/$T_studentPassedPO6;
+                                if(  $T_studentPassedPO6 != 0){
+                                    $resultPO6 = $PO6/$T_studentPassedPO6;
+                                }else{
+                                    $resultPO6 = $PO6;
+                                }
                             @endphp
                                 {{ $resultPO6 }}</td>
                             <td class="border text-center">@php
@@ -125,7 +149,11 @@
                                         $PO7++;
                                     }
                                 }
-                                $resultPO7 = $PO7/$T_studentPassedPO7;
+                                if(  $T_studentPassedPO7 != 0){
+                                    $resultPO7 = $PO7/$T_studentPassedPO7;
+                                }else{
+                                    $resultPO7 = $PO7;
+                                }
                             @endphp
                                 {{ $resultPO7 }}</td>
                             <td class="border text-center">@php
@@ -136,9 +164,13 @@
                                         $PO8++;
                                     }
                                 }
-                                $resultPO8 = $PO8/$T_studentPassedPO8;
+                                if(  $T_studentPassedPO8 != 0){
+                                    $resultPO8 = $PO8/$T_studentPassedPO8;
+                                }else{
+                                    $resultPO8 = $PO8;
+                                }
                             @endphp
-                                {{ $PO8 }}</td>
+                                {{   $resultPO8 }}</td>
                             <td class="border text-center">@php
                                 $PO9 = 0;
                                 $T_studentPassedPO9 = $course1->students->where('user_id', Auth()->id())->where('PO9', '>', 0)->count();
@@ -147,7 +179,11 @@
                                         $PO9++;
                                     }
                                 }
-                                $resultPO9 = $PO9/$T_studentPassedPO9;
+                                if(  $T_studentPassedPO9 != 0){
+                                    $resultPO9 = $PO9/$T_studentPassedPO9;
+                                }else{
+                                    $resultPO9 = $PO9;
+                                }
                             @endphp
                                 {{  $resultPO9 }}</td>
                             <td class="border text-center">@php
@@ -158,7 +194,11 @@
                                         $PO10++;
                                     }
                                 }
-                                $resultPO10 = $PO10/$T_studentPassedPO10;
+                                if(  $T_studentPassedPO10 != 0){
+                                    $resultPO10 = $PO10/$T_studentPassedPO10;
+                                }else{
+                                    $resultPO10 = $PO10;
+                                }
                             @endphp
                                 {{  $resultPO10 }}</td>
                         </tr>
