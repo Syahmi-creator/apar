@@ -63,7 +63,7 @@
                                     $resultPO1 = $PO1;
                                 }
                             @endphp
-                                {{ $resultPO1 }}</td>
+                                {{ number_format($resultPO1,2) }}</td>
                             <td class="border text-center"> @php
                                 $PO2 = 0;
                                 $T_studentPassedPO2 = $course1->students->where('user_id', Auth()->id())->where('PO2', '>', 0)->count();
@@ -78,7 +78,7 @@
                                     $resultPO2 = $PO2;
                                 }
                             @endphp
-                                {{ $resultPO2 }}</td>
+                                {{ number_format($resultPO2,2) }}</td>
 
                             <td class="border text-center"> @php
                                 $PO3 = 0;
@@ -94,7 +94,7 @@
                                     $resultPO3 = $PO3;
                                 }
                             @endphp
-                                {{ $resultPO3 }}</td>
+                                {{ number_format($resultPO3,2) }}</td>
                             </td>
                             <td class="border text-center">@php
                                 $PO4 = 0;
@@ -110,7 +110,7 @@
                                     $resultPO4 = $PO4;
                                 }
                             @endphp
-                                {{ $resultPO4 }}</td>
+                                {{ number_format($resultPO4,2) }}</td>
                             <td class="border text-center">@php
                                 $PO5 = 0;
                                 $T_studentPassedPO5 = $course1->students->where('user_id', Auth()->id())->where('PO5', '>', 0)->count();
@@ -125,7 +125,7 @@
                                     $resultPO5 = $PO5;
                                 }
                             @endphp
-                                {{ $resultPO5 }}</td>
+                                {{ number_format($resultPO5,2) }}</td>
                             <td class="border text-center">@php
                                 $PO6 = 0;
                                 $T_studentPassedPO6 = $course1->students->where('user_id', Auth()->id())->where('PO6', '>', 0)->count();
@@ -140,7 +140,7 @@
                                     $resultPO6 = $PO6;
                                 }
                             @endphp
-                                {{ $resultPO6 }}</td>
+                                {{ number_format($resultPO6,2) }}</td>
                             <td class="border text-center">@php
                                 $PO7 = 0;
                                 $T_studentPassedPO7 = $course1->students->where('user_id', Auth()->id())->where('PO7', '>', 0)->count();
@@ -155,7 +155,7 @@
                                     $resultPO7 = $PO7;
                                 }
                             @endphp
-                                {{ $resultPO7 }}</td>
+                                {{ number_format($resultPO7,2) }}</td>
                             <td class="border text-center">@php
                                 $PO8 = 0;
                                 $T_studentPassedPO8 = $course1->students->where('user_id', Auth()->id())->where('PO8', '>', 0)->count();
@@ -170,7 +170,7 @@
                                     $resultPO8 = $PO8;
                                 }
                             @endphp
-                                {{   $resultPO8 }}</td>
+                                {{  number_format($resultPO8,2) }}</td>
                             <td class="border text-center">@php
                                 $PO9 = 0;
                                 $T_studentPassedPO9 = $course1->students->where('user_id', Auth()->id())->where('PO9', '>', 0)->count();
@@ -185,7 +185,7 @@
                                     $resultPO9 = $PO9;
                                 }
                             @endphp
-                                {{  $resultPO9 }}</td>
+                                {{  number_format($resultPO9,2) }}</td>
                             <td class="border text-center">@php
                                 $PO10 = 0;
                                 $T_studentPassedPO10 = $course1->students->where('user_id', Auth()->id())->where('PO10', '>', 0)->count();
@@ -200,7 +200,7 @@
                                     $resultPO10 = $PO10;
                                 }
                             @endphp
-                                {{  $resultPO10 }}</td>
+                                {{  number_format($resultPO10,2) }}</td>
                         </tr>
                     @endif
                 @endforeach
