@@ -202,20 +202,21 @@
                             @endphp
                                 {{  number_format($resultPO10,2) }}%</td>
                         </tr>
-                        <tr>
-                            <th scope="row">Total Score </th>
-                            <td>@php
-                            $total_PO1 = 0;
-                            $PO1_calculation = array($resultPO1);
-                            $total_PO1 += array_sum($PO1_calculation);
-                            @endphp
-                            {{$total_PO1}}
-                            </td>
-
-                          </tr>
 
                     @endif
                 @endforeach
+                <tr>
+                    <th scope="row">Total Score </th>
+                    <td>@php
+                    $total_PO1 = 0;
+                    $PO1_calculation = array(number_format($resultPO1,2));
+                    $total_PO1 += array_sum($PO1_calculation);
+                    @endphp
+                    {{$total_PO1}}
+                    </td>
+
+                  </tr>
+
             </tbody>
         </table>
 
