@@ -208,8 +208,8 @@
                             $total_PO1 = 0;
 
 
-                            foreach ($resultPO1 as $pass_PO1) {
-                                $PO1_calculation = array(number_format($pass_PO1,2));
+                            foreach ( number_format($resultPO1,2) as $pass_PO1) {
+                                $PO1_calculation = array($pass_PO1);
                                 $total_PO1 += array_sum($PO1_calculation);
                                     }
                             @endphp
