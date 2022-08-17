@@ -206,8 +206,8 @@
                             <th scope="row">Total Score </th>
                             <td>@php
                             $total_PO1 = 0;
-                            $PO1_calculation = array($$resultPO1);
-                            $total_PO1 = array_sum($PO1_calculation);
+                            $PO1_calculation = array($resultPO1);
+                            $total_PO1 += array_sum($PO1_calculation);
                             @endphp
                             {{$total_PO1}}
                             </td>
