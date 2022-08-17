@@ -27,6 +27,7 @@
         <div class="card-header">
           Information for APAR cohort
         </div>
+    </div>
         <div class="card-body">
             {{-- <form action="#" method="POST">
                 @csrf --}}
@@ -60,7 +61,7 @@
 
             {{-- </form> --}}
         </div>
-      </div>
+
 
     </div>
 
