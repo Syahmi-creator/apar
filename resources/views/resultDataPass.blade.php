@@ -211,7 +211,8 @@
                     <td colspan="4">Total Score </td>
                     <td>@php
                     $total_PO1 = 0;
-                    $PO1_calculation = array_column((number_format($resultPO1,2)),'PO1');
+                    $PO1_calculation = array(number_format($resultPO1,2));
+                    $PO1_calculation;
                     $total_PO1 += array_sum($PO1_calculation);
                     @endphp
                     {{number_format($total_PO1,2)}}
