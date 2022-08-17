@@ -212,7 +212,7 @@
                     $PO1_calculation = array(number_format($resultPO1,2));
                     $total_PO1 += array_sum($PO1_calculation);
                     @endphp
-                    {{$total_PO1}}
+                    {{number_format($total_PO1,2))}}
                     </td>
 
                   </tr>
