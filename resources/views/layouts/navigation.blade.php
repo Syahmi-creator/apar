@@ -19,13 +19,13 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('file')" :active="request()->routeIs('file')">
-                        {{ __('Files') }}
+                        {{ __('Upload File') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('getDelete')" :active="request()->routeIs('getDelete')">
-                        {{ __('Delete') }}
+                        {{ __('Delete File') }}
                     </x-nav-link>
                 </div>
                 {{-- @if (Auth()->id() == 1)
@@ -39,7 +39,7 @@
             @if (Auth()->id())
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <x-nav-link :href="route('excelView')" :active="request()->routeIs('excelView')">
-                    {{ __('Excel Preview') }}
+                    {{ __('Data Preview') }}
                 </x-nav-link>
             </div>
             @endif
@@ -47,18 +47,18 @@
             @if (Auth()->id())
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <x-nav-link :href="route('resultData')" :active="request()->routeIs('resultData')">
-                    {{ __('Checking') }}
+                    {{ __('Checking Total Student') }}
                 </x-nav-link>
             </div>
             @endif
 
-            @if (Auth()->id())
+            {{-- @if (Auth()->id())
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <x-nav-link :href="route('resultDataMean')" :active="request()->routeIs('resultDataMean')">
                     {{ __('Mean Check') }}
                 </x-nav-link>
             </div>
-            @endif
+            @endif --}}
 
             @if (Auth()->id())
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">

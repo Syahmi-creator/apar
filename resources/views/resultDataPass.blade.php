@@ -13,8 +13,8 @@
             <thead>
                 <tr>
                     <th class="border">No</th>
-                    <th class="border text-center">Year</th>
-                    <th class="border text-center">Semester</th>
+                    {{-- <th class="border text-center">Year</th>
+                    <th class="border text-center">Semester</th> --}}
                     <th class="border text-center">Course</th>
                     <th class="border text-center">Course Code</th>
                     <th class="border text-center">Credit Hour</th>
@@ -38,8 +38,8 @@
                     @if ($course1->students->where('user_id', Auth()->id())->count() > 0)
                         <tr>
                             <td class="border text-center">{{ 1 }}</td>
-                            <td class="border text-center">{{ $course1->year_offer }}</td>
-                            <td class="border text-center">{{ $course1->semester_offer }}</td>
+                            {{-- <td class="border text-center">{{ $course1->year_offer }}</td>
+                            <td class="border text-center">{{ $course1->semester_offer }}</td> --}}
                             <td class="border text-center">{{ $course1->course_name }}</td>
                             <td class="border text-center">{{ $course1->course }}</td>
                             <td class="border text-center">{{ $course1->credit_hour }}</td>
