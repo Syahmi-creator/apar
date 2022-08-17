@@ -205,7 +205,10 @@
 
                     @endif
                 @endforeach
-                <tr>
+
+                    @foreach ($courses as $course1)
+                    @if ($course1->students->where('user_id', Auth()->id())->count() > 0)
+                    <tr>
                     <th scope="row">Total Score </th>
                     <td>@php
                     $total_PO1 = 0;
@@ -216,7 +219,8 @@
                     </td>
 
                   </tr>
-
+                  @endif
+                  @endforeach
             </tbody>
         </table>
 
