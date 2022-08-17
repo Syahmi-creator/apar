@@ -17,7 +17,7 @@
                     <th class="border text-center">Semester</th> --}}
                     <th class="border text-center">Course</th>
                     <th class="border text-center">Course Code</th>
-                    <th class="border text-center">Credit Hour</th>
+                    {{-- <th class="border text-center">Credit Hour</th> --}}
                     <th class="border text-center">Total Student</th>
                     <th class="border text-center">PLO 1</th>
                     <th class="border text-center">PLO 2</th>
@@ -44,7 +44,7 @@
                             <td class="border text-center">{{ $course1->semester_offer }}</td> --}}
                             <td class="border text-center">{{ $course1->course_name }}</td>
                             <td class="border text-center">{{ $course1->course }}</td>
-                            <td class="border text-center">{{ $course1->credit_hour }}</td>
+                            {{-- <td class="border text-center">{{ $course1->credit_hour }}</td> --}}
                             <td class="border text-center">
                                 {{ $course1->students->where('user_id', Auth()->id())->count() }}</td>
                             <td class="border text-center">
@@ -120,12 +120,12 @@
                                     }
                                 }
                                 if(  $T_studentPassedPO5 != 0){
-                                    $resultPO5 = $PO5/$T_studentPassedPO5;
+                                    $resultPO5 = ($PO5/$T_studentPassedPO5) *100;
                                 }else{
                                     $resultPO5 = $PO5;
                                 }
                             @endphp
-                                {{ number_format($resultPO5,2) }}</td>
+                                {{ number_format($resultPO5,2) }}%</td>
                             <td class="border text-center">@php
                                 $PO6 = 0;
                                 $T_studentPassedPO6 = $course1->students->where('user_id', Auth()->id())->where('PO6', '>', 0)->count();
@@ -202,6 +202,19 @@
                             @endphp
                                 {{  number_format($resultPO10,2) }}%</td>
                         </tr>
+                        <tr>
+                            <th scope="row">Total Score </th>
+                            <td>@php
+                            $total_PO1 = array_sum($resultPO1);
+                            @endphp
+                            {{$total_PO1}}
+
+
+
+                            </td>
+
+                          </tr>
+
                     @endif
                 @endforeach
             </tbody>
