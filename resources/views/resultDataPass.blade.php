@@ -206,13 +206,13 @@
                     @endif
                 @endforeach
 
-                    @foreach ($courses as $course1)
-                    @if ($course1->students->where('user_id', Auth()->id())->count() > 0)
+
                     <tr>
-                    <th scope="row">Total Score </th>
+                    <td colspan="4">Total Score </td>
                     <td>@php
                     $total_PO1 = 0;
                     $PO1_calculation = array(number_format($resultPO1,2));
+                    $PO1_calculation++;
                     $total_PO1 += array_sum($PO1_calculation);
                     @endphp
                     {{number_format($total_PO1,2)}}
