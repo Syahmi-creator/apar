@@ -205,10 +205,21 @@
                         <tr>
                             <td colspan="4">Total Score </td>
                             <td>@php
+                                $PO1 = 0;
+                                $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
+                                foreach ($course1->students as $student) {
+                                    if ($student->PO1 >= 65.0) {
+                                        $PO1++;
+                                    }
+                                }
+                                if( $T_studentPassedPO1 != 0){
+                                    $resultPO1 = ($PO1/$T_studentPassedPO1)* 100 ;
+                                }else{
+                                    $resultPO1 = $PO1;
+                                }
+                                $kpi_passed_resultPO1 = number_format($resultPO1,2);
                             $total_PO1 = 0;
-
-
-                            foreach ( number_format($resultPO1,2) as $pass_PO1) {
+                            foreach (  $kpi_passed_resultPO1 as $pass_PO1) {
                                 $PO1_calculation = array($pass_PO1);
                                 $total_PO1 += array_sum($PO1_calculation);
                                     }
