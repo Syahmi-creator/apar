@@ -8,6 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <div class="container">
+        @php
+            app\Model\StudentKPI::create([
+                'total' => $overall_ts,
+            ]);
+            $overall_ts = 0;
+        @endphp
 
         <table class="table table-responsive">
             <thead>
@@ -49,6 +55,7 @@
                                 {{ $course1->students->where('user_id', Auth()->id())->count() }}</td>
                             <td class="border text-center">
                                 @php
+                                $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->count();
                                 $PO1 = 0;
                                 $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -204,27 +211,7 @@
                         </tr>
                         <tr>
                             <td colspan="4">Total Score </td>
-                            <td>@php
-                                $PO1 = 0;
-                                $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
-                                foreach ($course1->students as $student) {
-                                    if ($student->PO1 >= 65.0) {
-                                        $PO1++;
-                                    }
-                                }
-                                if( $T_studentPassedPO1 != 0){
-                                    $resultPO1 = ($PO1/$T_studentPassedPO1)* 100 ;
-                                }else{
-                                    $resultPO1 = $PO1;
-                                }
-                                $kpi_passed_resultPO1 = number_format($resultPO1,2);
-                            $total_PO1 = 0;
-                            foreach (  $kpi_passed_resultPO1 as $pass_PO1) {
-                                $PO1_calculation = array($pass_PO1);
-                                $total_PO1 += array_sum($PO1_calculation);
-                                    }
-                            @endphp
-                            {{number_format($total_PO1,2)}}%
+                            <td>
                             </td>
 
                           </tr>

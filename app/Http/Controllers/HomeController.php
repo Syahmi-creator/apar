@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\File;
 use App\Models\Image;
-
+use App\Models\Information;
+use App\Models\StudentInformation;
 
 class HomeController extends Controller
 {
@@ -41,4 +42,24 @@ class HomeController extends Controller
 
         return view('dashboard', compact('images'));
     }
+
+    public function store(Request $request){
+
+        $informations = Information::create(
+            [
+                'graduation_session' => $request-> graduation_session,
+                'graduation_semester' => $request-> graduation_semester,
+                'total_student' => $request-> total_student,
+                'formFile' => $request-> formFile
+
+
+            ]
+            );
+
+
+
+
+    }
+
+
 }

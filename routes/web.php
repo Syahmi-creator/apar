@@ -22,6 +22,8 @@ Route::get('/', [HomeController::class, 'redirectLogin'])->middleware(['auth'])-
 
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
+Route::get('/dashboard/store', [HomeController::class, 'store'])->middleware(['auth'])->name('dashboard.store');
+
 Route::get('/file', [HomeController::class, 'file'])->middleware(['auth'])->name('file');
 
 Route::post('/upload-file', [FileController::class, 'fileUpload'])->middleware(['auth'])->name('fileUpload');
