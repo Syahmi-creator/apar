@@ -57,6 +57,7 @@
                         <label for="formFile" class="form-label">Upload student file</label>
                         <input class="form-control" type="file" id="formFile">
                     </div>
+                <br>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

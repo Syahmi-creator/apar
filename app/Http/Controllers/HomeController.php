@@ -51,8 +51,6 @@ class HomeController extends Controller
                 'graduation_semester' => $request-> graduation_semester,
                 'total_student' => $request-> total_student,
                 'formFile' => $request-> formFile
-
-
             ]
             );
 
