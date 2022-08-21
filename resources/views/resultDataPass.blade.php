@@ -216,9 +216,9 @@
                             <td colspan="4">Total Score </td>
                             <td>
                                 @php
-                                  $latestKPIPO1 = $PO1_calculation / $overall_ts;
+                                  $latestKPIPO1 = ($PO1_calculation / $overall_ts)*100;
                     @endphp
-                    {{number_format($latestKPIPO1,2)}}
+                    {{number_format($latestKPIPO1,2)}}%
 
                             </td>
 
