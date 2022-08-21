@@ -209,7 +209,7 @@
                         </tr>
                         @endif
                         @endforeach
-                        <tr>
+                        {{-- <tr>
                             <td colspan="4">Total Score </td>
                             <td>
                                 @php
@@ -221,7 +221,7 @@
 
                             </td>
 
-                          </tr>
+                          </tr> --}}
 
 
             </tbody>
