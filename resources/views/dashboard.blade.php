@@ -22,50 +22,90 @@
     </div> --}}
 
     <!-- Content Row -->
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-header-text-center">
-                    Information for APAR cohort
+    @if (Auth()->id() == 1)
+
+       <h5> Only test user can see this dashboard </h5>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header-text-center">
+                        Information for APAR cohort
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('dashboard.store') }}" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <label for="graduation_session">Graduation Session:</label>
+                            <select class="form-control" name="graduation_session"
+                                aria-label="Select Graduation Session" required>
+                                <option value="2021/2022">2021/2022</option>
+                                <option value="2022/2023">2022/2023</option>
+                                <option value="2023/2024">2023/2024</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="graduation_semester">Graduation Semester:</label>
+                            <select class="form-control" name="graduation_semester"
+                                aria-label="Select Graduation Semester" required>
+                                <option value="1">I</option>
+                                <option value="2">II</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="total_student">Total number of students for this cohort:</label>
+                            <input type="number" name="total_student" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formFile" class="form-label">Upload student file</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
-            <div class="card-body">
-                <form action="{{ route('dashboard.store') }}" method="POST">
-                    @csrf
-                    <div class="form-group">
-                        <label for="graduation_session">Graduation Session:</label>
-                        <select class="form-control" name="graduation_session" aria-label="Select Graduation Session"
-                            required>
-                            <option value="2021/2022">2021/2022</option>
-                            <option value="2022/2023">2022/2023</option>
-                            <option value="2023/2024">2023/2024</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="graduation_semester">Graduation Semester:</label>
-                        <select class="form-control" name="graduation_semester" aria-label="Select Graduation Semester"
-                            required>
-                            <option value="1">I</option>
-                            <option value="2">II</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="total_student">Total number of students for this cohort:</label>
-                        <input type="number" name="total_student" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="formFile" class="form-label">Upload student file</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-                <br>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-
-
         </div>
 
-    </div>
+        <p> Task 21/8/2022, updated all the user and password, the year of APAR still configured (for now need to deleted file to proceed with a new year of APAR) </p>
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th class="border">No</th>
+                    <th class="border text-center">Email</th>
+                    <th class="border text-center">Password</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                        <tr>
+                            <td class="border text-center">1</td>
+                            <td class="border text-center">secrh@gmail.com</td>
+                            <td class="border text-center">password</td>
+                          </tr>
+                          <tr>
+                            <td class="border text-center">2</td>
+                            <td class="border text-center">secrh@gmail.com</td>
+                            <td class="border text-center">password</td>
+                          </tr>
+                          <tr>
+                            <td class="border text-center">3</td>
+                            <td class="border text-center">secph@gmail.com</td>
+                            <td class="border text-center">password</td>
+                          </tr>
+                          <tr>
+                            <td class="border text-center">4</td>
+                            <td class="border text-center">secvh@gmail.com</td>
+                            <td class="border text-center">password</td>
+                          </tr>
+                          <tr>
+                            <td class="border text-center">5</td>
+                            <td class="border text-center">secbh@gmail.com</td>
+                            <td class="border text-center">password</td>
+                          </tr>
+            </tbody>
+        </table>
+
+    @endif
 
 </x-app-layout>
