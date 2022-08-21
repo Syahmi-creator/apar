@@ -9,10 +9,8 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <div class="container">
         @php
-            app\Model\StudentKPI::create([
-                'total' => $overall_ts,
-            ]);
             $overall_ts = 0;
+            $PO1_calculation = 0;
         @endphp
 
         <table class="table table-responsive">
@@ -212,6 +210,13 @@
                         <tr>
                             <td colspan="4">Total Score </td>
                             <td>
+                                @php
+                                  $PO1_calculation += $resultPO1;
+                                  $latestKPIPO1 = $PO1_calculation / $overall_ts;
+
+                    @endphp
+                    {{number_format($latestKPIPO1,2)}}
+
                             </td>
 
                           </tr>

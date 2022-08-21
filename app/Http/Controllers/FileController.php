@@ -10,6 +10,7 @@ use App\Exports\ExcelTableExport;
 use App\Imports\StudentImport;
 use App\Imports\SpaceStudentImport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Models\StudentKPI;
 
 class FileController extends Controller
 {
@@ -108,7 +109,7 @@ class FileController extends Controller
                     $resultPO1 = $PO1;
                 }
 
-                $new = NewData::create([
+                $new = StudentKPI::create([
                     'course' => $sub,
                     'kpi_PO1' => $resultPO1
                 ]);
@@ -173,8 +174,6 @@ class FileController extends Controller
                                 }else{
                                     $resultPO5 = $PO5;
                                 }
-
-
                                 $new->update([
                                     'kpi_PO5' => $resultPO5
                                 ]);
@@ -257,40 +256,7 @@ class FileController extends Controller
                                 $new->update([
                                     'kpi_PO10' => $resultPO10
                                 ]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             }
-
-
-
-
-
         }
 
         return back()
