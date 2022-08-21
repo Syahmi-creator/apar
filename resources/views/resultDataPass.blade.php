@@ -51,7 +51,7 @@
                             <td class="border text-center">{{ $course1->course }}</td>
                             {{-- <td class="border text-center">{{ $course1->credit_hour }}</td> --}}
                             <td class="border text-center">
-                                {{ $course1->students->where('user_id', Auth()->id())->count() }}</td>
+                                {{ $course1->students->where('user_id', Auth()->id())->where('year',$year)->count() }}</td>
                             <td class="border text-center">
                                 @php
                                 $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
