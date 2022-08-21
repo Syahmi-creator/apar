@@ -49,7 +49,8 @@ Route::get('/excelView', [StudentController::class, 'excelView'])->middleware(['
 Route::get('/resultData', [StudentController::class, 'resultStudentData'])->middleware(['auth'])->name('resultData');
 Route::get('/resultStudentDataMean', [StudentController::class, 'resultStudentDataMean'])->middleware(['auth'])->name('resultDataMean');
 Route::get('/resultStudentDataPass', [StudentController::class, 'resultStudentDataPass'])->middleware(['auth'])->name('resultDataPass');
-// Route::get('/kpi/year/{year}', [StudentController::class, 'resultStudentDataPass'])->middleware(['auth'])->name('resultDataPass');
+Route::get('/resultStudentDataPassByYear', [StudentController::class, 'resultStudentDataPassByYear'])->middleware(['auth'])->name('resultDataPassByYear');
+Route::get('/kpi/year/{year}', [StudentController::class, 'resultStudentDataPass2'])->middleware(['auth'])->name('kpibyyear');
 
 
 require __DIR__.'/auth.php';

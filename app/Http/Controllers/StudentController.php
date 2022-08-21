@@ -62,19 +62,18 @@ class StudentController extends Controller
         }
 
 
-        // public function resultStudentDataPass2($year)
-        // {
-        //     $students = Student::all()->where('year', $year);
-        //     $stdnt_subject = Student::select('course')->groupBy('course')->get();
-        //     $stdnt_subject_count = count($stdnt_subject);
+        public function resultStudentDataPass2($year)
+        {
+            $students = Student::select('year')->where('year', $year)->get();
+            $courses = Course::all();
+            return view('resultDataPassByYear', compact('students','courses'));
+        }
 
-
-        //     $courses = Course::all();
-        //     // $test = $course[1]->students;
-        //     // dd($test);
-
-        //     return view('resultDataPass', compact('students','stdnt_subject', 'stdnt_subject_count','courses'));
-        //}
+        public function resultStudentDataPassByYear()
+        {
+            $years = Student::select('year')->groupBy('year')->get();
+            return view('resultDataPassByYear', compact('years'));
+        }
 
 
 

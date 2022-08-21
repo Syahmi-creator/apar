@@ -62,7 +62,7 @@
 
             @if (Auth()->id())
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-nav-link :href="route('resultDataPass')" :active="request()->routeIs('resultDataPass')">
+                <x-nav-link :href="route('resultDataPassByYear')" :active="request()->routeIs('resultDataPassByYear')">
                     {{ __('KPI Passed') }}
                 </x-nav-link>
             </div>
