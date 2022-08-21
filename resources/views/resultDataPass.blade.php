@@ -54,7 +54,7 @@
                                 {{ $course1->students->where('user_id', Auth()->id())->count() }}</td>
                             <td class="border text-center">
                                 @php
-                                $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->count();
+                                $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO1 = 0;
                                 $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
                                 foreach ($course1->students as $student) {
