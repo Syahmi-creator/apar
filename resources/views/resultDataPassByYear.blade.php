@@ -8,10 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <div class="container">
-        @php
-            $overall_ts = 0;
-            $PO1_calculation = 0;
-        @endphp
 
         <table class="table table-responsive">
             <thead>
@@ -30,6 +26,7 @@
                             <td class="border text-center">{{ $i++ }}</td>
                             <td class="border text-center"><a href="{{route('kpibyyear', $year->year)}}">{{$year->year}}</a></td>
                           </tr>
+                @endforeach
             </tbody>
         </table>
 
