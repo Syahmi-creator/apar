@@ -22,6 +22,7 @@
     </div> --}}
 
     <!-- Content Row -->
+    <div class="container">
     @if (Auth()->id() == 1)
 
        <h5> Only test user can see this dashboard </h5>
@@ -107,5 +108,6 @@
         </table>
 
     @endif
+    </div>
 
 </x-app-layout>
