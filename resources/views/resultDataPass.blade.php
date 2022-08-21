@@ -68,6 +68,8 @@
                                 }else{
                                     $resultPO1 = $PO1;
                                 }
+                                $PO1_calculation += $resultPO1;
+
                             @endphp
                                 {{ number_format($resultPO1,2) }}%</td>
                             <td class="border text-center"> @php
@@ -214,10 +216,7 @@
                             <td colspan="4">Total Score </td>
                             <td>
                                 @php
-                                  $PO1_calculation += $resultPO1;
                                   $latestKPIPO1 = $PO1_calculation / $overall_ts;
-                                  dd($overall_ts);
-
                     @endphp
                     {{number_format($latestKPIPO1,2)}}
 
