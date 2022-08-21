@@ -24,7 +24,7 @@
     <!-- Content Row -->
     <div class="container">
     @if (Auth()->id() == 1)
-
+<br>
        <h5> Only test user can see this dashboard </h5>
         <div class="row">
             <div class="col-sm-12">
@@ -86,7 +86,7 @@
                           </tr>
                           <tr>
                             <td class="border text-center">2</td>
-                            <td class="border text-center">secrh@gmail.com</td>
+                            <td class="border text-center">secjh@gmail.com</td>
                             <td class="border text-center">password</td>
                           </tr>
                           <tr>
