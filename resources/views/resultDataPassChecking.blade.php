@@ -62,11 +62,11 @@
                                     }
                                 }
 
-                                if(  $T_studentPassedPO1 != 0){
-                                    $resultPO1 = ($PO1/$T_studentPassedPO1)* 100 ;
-                                }else{
-                                    $resultPO1 = $PO1;
-                                }
+                                // if(  $T_studentPassedPO1 != 0){
+                                //     $resultPO1 = ($PO1/$T_studentPassedPO1)* 100 ;
+                                // }else{
+                                //     $resultPO1 = $PO1;
+                                // }
                             @endphp
                                 {{ number_format($resultPO1,2) }}%</td>
                             <td class="border text-center"> @php
@@ -77,11 +77,11 @@
                                         $PO2++;
                                     }
                                 }
-                                if(  $T_studentPassedPO2 != 0){
-                                    $resultPO2 = ($PO2/$T_studentPassedPO2)* 100;
-                                }else{
-                                    $resultPO2 = $PO2;
-                                }
+                                // if(  $T_studentPassedPO2 != 0){
+                                //     $resultPO2 = ($PO2/$T_studentPassedPO2)* 100;
+                                // }else{
+                                //     $resultPO2 = $PO2;
+                                // }
                             @endphp
                                 {{ number_format($resultPO2,2) }}%</td>
 
@@ -93,11 +93,11 @@
                                         $PO3++;
                                     }
                                 }
-                                if(  $T_studentPassedPO3 != 0){
-                                    $resultPO3 = ($PO3/$T_studentPassedPO3)* 100;
-                                }else{
-                                    $resultPO3 = $PO3;
-                                }
+                                // if(  $T_studentPassedPO3 != 0){
+                                //     $resultPO3 = ($PO3/$T_studentPassedPO3)* 100;
+                                // }else{
+                                //     $resultPO3 = $PO3;
+                                // }
                             @endphp
                                 {{ number_format($resultPO3,2) }}%</td>
                             </td>
@@ -109,11 +109,11 @@
                                         $PO4++;
                                     }
                                 }
-                                if(  $T_studentPassedPO4 != 0){
-                                    $resultPO4 = ($PO4/$T_studentPassedPO4) *100;
-                                }else{
-                                    $resultPO4 = $PO4;
-                                }
+                                // if(  $T_studentPassedPO4 != 0){
+                                //     $resultPO4 = ($PO4/$T_studentPassedPO4) *100;
+                                // }else{
+                                //     $resultPO4 = $PO4;
+                                // }
                             @endphp
                                 {{ number_format($resultPO4,2) }}%</td>
                             <td class="border text-center">@php
@@ -124,11 +124,11 @@
                                         $PO5++;
                                     }
                                 }
-                                if(  $T_studentPassedPO5 != 0){
-                                    $resultPO5 = ($PO5/$T_studentPassedPO5) *100;
-                                }else{
-                                    $resultPO5 = $PO5;
-                                }
+                                // if(  $T_studentPassedPO5 != 0){
+                                //     $resultPO5 = ($PO5/$T_studentPassedPO5) *100;
+                                // }else{
+                                //     $resultPO5 = $PO5;
+                                // }
                             @endphp
                                 {{ number_format($resultPO5,2) }}%</td>
                             <td class="border text-center">@php
@@ -139,11 +139,11 @@
                                         $PO6++;
                                     }
                                 }
-                                if(  $T_studentPassedPO6 != 0){
-                                    $resultPO6 = ($PO6/$T_studentPassedPO6) *100;
-                                }else{
-                                    $resultPO6 = $PO6;
-                                }
+                                // if(  $T_studentPassedPO6 != 0){
+                                //     $resultPO6 = ($PO6/$T_studentPassedPO6) *100;
+                                // }else{
+                                //     $resultPO6 = $PO6;
+                                // }
                             @endphp
                                 {{ number_format($resultPO6,2) }}%</td>
                             <td class="border text-center">@php
@@ -154,11 +154,11 @@
                                         $PO7++;
                                     }
                                 }
-                                if(  $T_studentPassedPO7 != 0){
-                                    $resultPO7 = ($PO7/$T_studentPassedPO7) *100;
-                                }else{
-                                    $resultPO7 = $PO7;
-                                }
+                                // if(  $T_studentPassedPO7 != 0){
+                                //     $resultPO7 = ($PO7/$T_studentPassedPO7) *100;
+                                // }else{
+                                //     $resultPO7 = $PO7;
+                                // }
                             @endphp
                                 {{ number_format($resultPO7,2) }}%</td>
                             <td class="border text-center">@php
@@ -169,11 +169,11 @@
                                         $PO8++;
                                     }
                                 }
-                                if(  $T_studentPassedPO8 != 0){
-                                    $resultPO8 = ($PO8/$T_studentPassedPO8) *100;
-                                }else{
-                                    $resultPO8 = $PO8;
-                                }
+                                // if(  $T_studentPassedPO8 != 0){
+                                //     $resultPO8 = ($PO8/$T_studentPassedPO8) *100;
+                                // }else{
+                                //     $resultPO8 = $PO8;
+                                // }
                             @endphp
                                 {{  number_format($resultPO8,2) }}%</td>
                             <td class="border text-center">@php
@@ -184,11 +184,11 @@
                                         $PO9++;
                                     }
                                 }
-                                if(  $T_studentPassedPO9 != 0){
-                                    $resultPO9 = ($PO9/$T_studentPassedPO9) * 100;
-                                }else{
-                                    $resultPO9 = $PO9;
-                                }
+                                // if(  $T_studentPassedPO9 != 0){
+                                //     $resultPO9 = ($PO9/$T_studentPassedPO9) * 100;
+                                // }else{
+                                //     $resultPO9 = $PO9;
+                                // }
                             @endphp
                                 {{  number_format($resultPO9,2) }}%</td>
                             <td class="border text-center">@php
@@ -199,11 +199,11 @@
                                         $PO10++;
                                     }
                                 }
-                                if(  $T_studentPassedPO10 != 0){
-                                    $resultPO10 = ($PO10/$T_studentPassedPO10)*100;
-                                }else{
-                                    $resultPO10 = $PO10;
-                                }
+                                // if(  $T_studentPassedPO10 != 0){
+                                //     $resultPO10 = ($PO10/$T_studentPassedPO10)*100;
+                                // }else{
+                                //     $resultPO10 = $PO10;
+                                // }
                             @endphp
                                 {{  number_format($resultPO10,2) }}%</td>
                         </tr>

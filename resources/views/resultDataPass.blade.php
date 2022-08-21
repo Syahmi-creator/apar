@@ -46,6 +46,7 @@
                             <td class="border text-center">{{ $i++ }}</td>
                             {{-- <td class="border text-center">{{ $course1->year_offer }}</td>
                             <td class="border text-center">{{ $course1->semester_offer }}</td> --}}
+                            {{-- <td class="border text-center"><a href="url"></a></td>  cth --}}
                             <td class="border text-center">{{ $course1->course_name }}</td>
                             <td class="border text-center">{{ $course1->course }}</td>
                             {{-- <td class="border text-center">{{ $course1->credit_hour }}</td> --}}
@@ -215,6 +216,7 @@
                                 @php
                                   $PO1_calculation += $resultPO1;
                                   $latestKPIPO1 = $PO1_calculation / $overall_ts;
+                                  dd($overall_ts);
 
                     @endphp
                     {{number_format($latestKPIPO1,2)}}
