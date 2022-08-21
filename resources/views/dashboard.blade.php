@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header-text-center">
+                    <div class="card-header">
                         Information for APAR cohort
                     </div>
                 </div>
@@ -79,27 +79,27 @@
                 </tr>
             </thead>
             <tbody>
-                        <tr>
+                        <tr class="table-primary">
                             <td class="border text-center">1</td>
                             <td class="border text-center">secrh@gmail.com</td>
                             <td class="border text-center">password</td>
                           </tr>
-                          <tr>
+                          <tr class="table-secondary">
                             <td class="border text-center">2</td>
                             <td class="border text-center">secjh@gmail.com</td>
                             <td class="border text-center">password</td>
                           </tr>
-                          <tr>
+                          <tr class="table-success">
                             <td class="border text-center">3</td>
                             <td class="border text-center">secph@gmail.com</td>
                             <td class="border text-center">password</td>
                           </tr>
-                          <tr>
+                          <tr class="table-info">
                             <td class="border text-center">4</td>
                             <td class="border text-center">secvh@gmail.com</td>
                             <td class="border text-center">password</td>
                           </tr>
-                          <tr>
+                          <tr class="table-warning">
                             <td class="border text-center">5</td>
                             <td class="border text-center">secbh@gmail.com</td>
                             <td class="border text-center">password</td>
