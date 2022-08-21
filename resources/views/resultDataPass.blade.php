@@ -207,6 +207,8 @@
                             @endphp
                                 {{  number_format($resultPO10,2) }}%</td>
                         </tr>
+                        @endif
+                        @endforeach
                         <tr>
                             <td colspan="4">Total Score </td>
                             <td>
@@ -222,8 +224,7 @@
                           </tr>
 
 
-                    @endif
-                @endforeach
+
 
 
                     {{-- <tr>
