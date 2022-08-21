@@ -66,7 +66,7 @@ class StudentController extends Controller
         {
             $students = Student::select('year')->where('year', $year)->get();
             $courses = Course::all();
-            return view('resultDataPassByYear', compact('students','courses'));
+            return view('resultDataPass', compact('students','courses'));
         }
 
         public function resultStudentDataPassByYear()
