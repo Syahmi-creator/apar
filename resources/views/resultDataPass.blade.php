@@ -57,7 +57,7 @@
                                 $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO1 = 0;
                                 $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
-                                foreach ($course1->students as $student) {
+                                foreach ($course1->students->where('user_id', Auth()->id())->where('year',$year) as $student) {
                                     if ($student->PO1 >= 65.0) {
                                         $PO1++;
                                     }
@@ -75,7 +75,7 @@
                             <td class="border text-center"> @php
                                 $PO2 = 0;
                                 $T_studentPassedPO2 = $course1->students->where('user_id', Auth()->id())->where('PO2', '>', 0)->count();
-                                foreach ($course1->students as $student) {
+                                foreach ($course1->students->where('user_id', Auth()->id())->where('year',$year) as $student) {
                                     if ($student->PO2 >= 65.0) {
                                         $PO2++;
                                     }
