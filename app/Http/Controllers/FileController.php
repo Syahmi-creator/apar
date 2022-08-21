@@ -256,8 +256,8 @@ class FileController extends Controller
         //                         $new->update([
         //                             'kpi_PO10' => $resultPO10
         //                         ]);
-        //     }
-        // }
+            }
+
 
         return back()
             ->with('success','File has been uploaded.');
