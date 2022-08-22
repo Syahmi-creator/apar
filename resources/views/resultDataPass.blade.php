@@ -223,6 +223,31 @@
                             </td>
 
                           </tr>
+                          <tr>
+                            <td colspan="4"> KPI* </td>
+                            <td colspan="10">
+                                65%
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">Achievement (YES or No)</td>
+                            <td>
+                                @php
+                                $PO1_KPI = number_format($latestKPIPO1,2);
+
+                                if ($PO1_KPI > 65)
+                                {
+                                    $PO1_KPI_achievement = "YES";
+                                }else {
+                                    $PO1_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO1_KPI_achievement}}
+
+                            </td>
+
+                          </tr>
+
 
 
             </tbody>
