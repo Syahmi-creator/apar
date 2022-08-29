@@ -225,7 +225,7 @@
                           </tr>
                           <tr>
                             <td colspan="4"> KPI* </td>
-                            <td colspan="14">
+                            <td colspan="14" text-align="center">
                                 65%
                             </td>
                           </tr>
