@@ -20,8 +20,7 @@ class CreateStudentsessionsTable extends Migration
             $table->string('Name');
             $table->string('IC');
             $table->string('matric');
-            $table->string('formFile');
-            $table->foreign('formFile')->reference('id')->on('informations')->onDelete('cascade');
+            $table->foreignId('formFile');
             $table->string('program');
             $table->foreignId('user_id')->nullable();
 
