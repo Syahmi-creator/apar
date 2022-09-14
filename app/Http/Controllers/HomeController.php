@@ -6,6 +6,7 @@ use App\Models\File;
 use App\Models\Image;
 use App\Models\Information;
 use App\Models\StudentInformation;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
