@@ -25,7 +25,6 @@ class CreateStudentsessionsTable extends Migration
             $table->string('program');
             $table->foreignId('user_id')->nullable();
 
-
         });
     }
 
