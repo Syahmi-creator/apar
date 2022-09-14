@@ -17,7 +17,7 @@ class StudentGraduateController extends Controller
    public function uploadStudentGraduates(Request $request)
    {
     Excel::import(new StudentInformationImport, $request->file);
-    return redirect()->route('/dashboard')->with('success', 'Student Information Import Successfully');
+    return redirect()->route('dashboard')->with('success', 'Student Information Import Successfully');
    }
 
 }
