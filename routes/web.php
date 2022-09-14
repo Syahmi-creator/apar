@@ -18,39 +18,27 @@ use App\Http\Controllers\StudentController;
 */
 
 Route::get('/', [HomeController::class, 'redirectLogin'])->middleware(['auth'])->name('redirectLogin');
-
-
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
-
 Route::get('/dashboard/store', [HomeController::class, 'store'])->middleware(['auth'])->name('dashboard.store');
-
 Route::get('/file', [HomeController::class, 'file'])->middleware(['auth'])->name('file');
-
 Route::post('/upload-file', [FileController::class, 'fileUpload'])->middleware(['auth'])->name('fileUpload');
-
 Route::post('/exportMerge', [ExcelController::class, 'exportMerge'])->middleware(['auth'])->name('exportMerge');
-
 Route::get('/delete', [HomeController::class, 'getDelete'])->middleware(['auth'])->name('getDelete');
-
 Route::post('/delete', [FileController::class, 'postDelete'])->middleware(['auth'])->name('postDelete');
-
 Route::post('/delete-image', [FileController::class, 'postImageDelete'])->middleware(['auth'])->name('postImageDelete');
-
 Route::get('/manage', [HomeController::class, 'manage'])->middleware(['auth'])->name('manage');
-
 Route::post('/upload-image', [FileController::class, 'imageUpload'])->middleware(['auth'])->name('imageUpload');
-
 Route::prefix('{file}')->middleware(['auth'])->group(function () {
     Route::get('/show', [ExcelController::class, 'show'])->name('show');
     Route::get('/export', [ExcelController::class, 'export'])->name('export');
 });
-
 Route::get('/excelView', [StudentController::class, 'excelView'])->middleware(['auth'])->name('excelView');
 Route::get('/resultData', [StudentController::class, 'resultStudentData'])->middleware(['auth'])->name('resultData');
 Route::get('/resultStudentDataMean', [StudentController::class, 'resultStudentDataMean'])->middleware(['auth'])->name('resultDataMean');
 Route::get('/resultStudentDataPass', [StudentController::class, 'resultStudentDataPass'])->middleware(['auth'])->name('resultDataPass');
 Route::get('/resultStudentDataPassByYear', [StudentController::class, 'resultStudentDataPassByYear'])->middleware(['auth'])->name('resultDataPassByYear');
 Route::get('/kpi/year/{year}', [StudentController::class, 'resultStudentDataPass2'])->middleware(['auth'])->name('kpibyyear');
+
 
 
 require __DIR__.'/auth.php';
