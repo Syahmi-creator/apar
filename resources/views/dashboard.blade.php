@@ -23,8 +23,7 @@
 
     <!-- Content Row -->
     <div class="container">
-    @if (Auth()->id() == 1)
-<br>
+
        <h5> Only test user can see this dashboard </h5>
         <div class="row">
             <div class="col-sm-12">
@@ -68,7 +67,7 @@
             </div>
         </div>
 
-        <p> Task 21/8/2022, updated all the user and password, the year of APAR still configured (for now need to deleted file to proceed with a new year of APAR) </p>
+        {{-- <p> Task 21/8/2022, updated all the user and password, the year of APAR still configured (for now need to deleted file to proceed with a new year of APAR) </p>
         <table class="table table-responsive">
             <thead>
                 <tr>
@@ -105,9 +104,7 @@
                             <td class="border text-center">password</td>
                           </tr>
             </tbody>
-        </table>
-
-    @endif
+        </table> --}}
     </div>
 
 </x-app-layout>

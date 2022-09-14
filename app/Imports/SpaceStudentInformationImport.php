@@ -14,6 +14,9 @@ class StudentInformationImport implements ToModel
     /**
     * @param Collection $collection
     */
+    protected $formFileId;
+    protected $userId;
+
     public function model(array $row)
     {
         return new StudentInformation([
