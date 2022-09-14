@@ -16,8 +16,6 @@ class CreateStudentsessionsTable extends Migration
         Schema::create('studentsessions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('graduation_session');
-            $table->foreign('graduation_session')->reference('id')->on('informations')->onDelete('cascade');
             $table->string('No');
             $table->string('Name');
             $table->string('IC');
@@ -26,10 +24,6 @@ class CreateStudentsessionsTable extends Migration
             $table->foreign('formFile')->reference('id')->on('informations')->onDelete('cascade');
             $table->string('program');
             $table->foreignId('user_id')->nullable();
-
-
-
-
 
 
         });
