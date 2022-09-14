@@ -21,7 +21,10 @@ class StudentInformationImport implements ToModel
             'Name'    => $row[1],
             'IC' => $row[2],
             'matric' => $row[3],
-            'program' => $row[4]
+            'program' => $row[4],
+            'formFile' => $this->formFileId,
+            'user_id' => Auth()->id()
+
         ]);
     }
 }

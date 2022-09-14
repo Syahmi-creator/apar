@@ -22,6 +22,7 @@ class StudentImport implements ToModel
 
     public function model(array $row)
     {
+        //if($row[10])
         return new Student([
             'no' => $row[0],
             'name' => $row[1],
@@ -34,7 +35,7 @@ class StudentImport implements ToModel
             'section' => $row[8],
             'IC' => $row[9],
             'matric' => $row[10],
-            'PO1' => $row[11],
+            'PO1' => $row[11] ,
             'PO2' => $row[12],
             'PO3' => $row[13],
             'PO4' => $row[14],

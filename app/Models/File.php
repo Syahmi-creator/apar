@@ -14,7 +14,7 @@ class File extends Model
 
     public function students()
     {
-        return $this->hasMany(Student::class);
+        return $this->hasMany(Student::class, 'file_id', 'id');
     }
     // protected $fillable = [
     //     'name',
