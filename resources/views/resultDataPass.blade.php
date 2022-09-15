@@ -9,16 +9,8 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <div class="container">
         @php
-            $overall_ts_01 = 0;
-            $overall_ts_02 = 0;
-            $overall_ts_03 = 0;
-            $overall_ts_04 = 0;
-            $overall_ts_05 = 0;
-            $overall_ts_06 = 0;
-            $overall_ts_07 = 0;
-            $overall_ts_08 = 0;
-            $overall_ts_09 = 0;
-            $overall_ts_10 = 0;
+            $overall_ts = 0;
+
 
             $PO1_calculation = 0;
             $PO2_calculation = 0;
