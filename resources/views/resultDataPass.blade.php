@@ -99,6 +99,7 @@
                                 }else{
                                     $resultPO2 = $PO2;
                                 }
+                                $PO2_calculation += $resultPO2;
                             @endphp
                                 {{ number_format($resultPO2,2) }}%</td>
 
@@ -117,6 +118,7 @@
                                 }else{
                                     $resultPO3 = $PO3;
                                 }
+                                $PO3_calculation += $resultPO3;
                             @endphp
                                 {{ number_format($resultPO3,2) }}%</td>
                             </td>
@@ -134,6 +136,7 @@
                                 }else{
                                     $resultPO4 = $PO4;
                                 }
+                                $PO4_calculation += $resultPO4;
                             @endphp
                                 {{ number_format($resultPO4,2) }}%</td>
                             <td class="border text-center">
@@ -151,6 +154,7 @@
                                 }else{
                                     $resultPO5 = $PO5;
                                 }
+                                $PO5_calculation += $resultPO5;
                             @endphp
                                 {{ number_format($resultPO5,2) }}%</td>
                             <td class="border text-center">
@@ -168,6 +172,7 @@
                                 }else{
                                     $resultPO6 = $PO6;
                                 }
+                                $PO6_calculation += $resultPO6;
                             @endphp
                                 {{ number_format($resultPO6,2) }}%</td>
                             <td class="border text-center">
@@ -185,6 +190,7 @@
                                 }else{
                                     $resultPO7 = $PO7;
                                 }
+                                $PO7_calculation += $resultPO7;
                             @endphp
                                 {{ number_format($resultPO7,2) }}%</td>
                             <td class="border text-center">
@@ -202,6 +208,7 @@
                                 }else{
                                     $resultPO8 = $PO8;
                                 }
+                                $PO8_calculation += $resultPO8;
                             @endphp
                                 {{  number_format($resultPO8,2) }}%</td>
                             <td class="border text-center">
@@ -219,6 +226,7 @@
                                 }else{
                                     $resultPO9 = $PO9;
                                 }
+                                $PO9_calculation += $resultPO9;
                             @endphp
                                 {{  number_format($resultPO9,2) }}%</td>
                             <td class="border text-center">
@@ -236,6 +244,7 @@
                                 }else{
                                     $resultPO10 = $PO10;
                                 }
+                                $PO10_calculation += $resultPO10;
                             @endphp
                                 {{  number_format($resultPO10,2) }}%</td>
                         </tr>
