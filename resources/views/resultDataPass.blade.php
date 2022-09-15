@@ -325,7 +325,7 @@
 
                           </tr>
                           <tr>
-                            <td colspan="4"> KPI* </td>
+                            <td colspan="4"> KPI*
                             <td colspan="14" text-align="center">
                                 65%
                             </td>
@@ -346,6 +346,134 @@
                     {{$PO1_KPI_achievement}}
 
                             </td>
+                            <td>
+                                @php
+                                $PO2_KPI = number_format($latestKPIPO2,2);
+
+                                if ($PO2_KPI > 65)
+                                {
+                                    $PO2_KPI_achievement = "YES";
+                                }else {
+                                    $PO2_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO2_KPI_achievement}}
+
+                            </td>
+                            <td>
+                                @php
+                                $PO3_KPI = number_format($latestKPIPO3,2);
+
+                                if ($PO3_KPI > 65)
+                                {
+                                    $PO3_KPI_achievement = "YES";
+                                }else {
+                                    $PO3_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO3_KPI_achievement}}
+
+                            </td>
+                            <td>
+                                @php
+                                $PO4_KPI = number_format($latestKPIPO4,2);
+
+                                if ($PO4_KPI > 65)
+                                {
+                                    $PO4_KPI_achievement = "YES";
+                                }else {
+                                    $PO4_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO4_KPI_achievement}}
+
+                            </td>
+                            <td>
+                                @php
+                                $PO5_KPI = number_format($latestKPIPO5,2);
+
+                                if ($PO5_KPI > 65)
+                                {
+                                    $PO5_KPI_achievement = "YES";
+                                }else {
+                                    $PO5_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO5_KPI_achievement}}
+
+                            </td>
+                            <td>
+                                @php
+                                $PO6_KPI = number_format($latestKPIPO6,2);
+
+                                if ($PO6_KPI > 65)
+                                {
+                                    $PO6_KPI_achievement = "YES";
+                                }else {
+                                    $PO6_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO6_KPI_achievement}}
+
+                            </td>
+                            <td>
+                                @php
+                                $PO7_KPI = number_format($latestKPIPO7,2);
+
+                                if ($PO7_KPI > 65)
+                                {
+                                    $PO7_KPI_achievement = "YES";
+                                }else {
+                                    $PO7_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO7_KPI_achievement}}
+
+                            </td>
+                            <td>
+                                @php
+                                $PO8_KPI = number_format($latestKPIPO8,2);
+
+                                if ($PO8_KPI > 65)
+                                {
+                                    $PO8_KPI_achievement = "YES";
+                                }else {
+                                    $PO8_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO8_KPI_achievement}}
+
+                            </td>
+                            <td>
+                                @php
+                                $PO9_KPI = number_format($latestKPIPO9,2);
+
+                                if ($PO9_KPI > 65)
+                                {
+                                    $PO9_KPI_achievement = "YES";
+                                }else {
+                                    $PO9_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO9_KPI_achievement}}
+
+                            </td>
+                            <td>
+                                @php
+                                $PO10_KPI = number_format($latestKPIPO10,2);
+
+                                if ($PO10_KPI > 65)
+                                {
+                                    $PO10_KPI_achievement = "YES";
+                                }else {
+                                    $PO10_KPI_achievement = "NO";
+                                }
+                    @endphp
+                    {{$PO10_KPI_achievement}}
+
+                            </td>
+
+
 
                           </tr>
 
