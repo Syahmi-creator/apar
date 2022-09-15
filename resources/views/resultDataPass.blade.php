@@ -9,7 +9,17 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <div class="container">
         @php
-            $overall_ts = 0;
+            $overall_ts_01 = 0;
+            $overall_ts_02 = 0;
+            $overall_ts_03 = 0;
+            $overall_ts_04 = 0;
+            $overall_ts_05 = 0;
+            $overall_ts_06 = 0;
+            $overall_ts_07 = 0;
+            $overall_ts_08 = 0;
+            $overall_ts_09 = 0;
+            $overall_ts_010 = 0;
+
             $PO1_calculation = 0;
             $PO2_calculation = 0;
             $PO3_calculation = 0;
@@ -64,7 +74,7 @@
                                 {{ $course1->students->where('user_id', Auth()->id())->where('year',$year)->count() }}</td>
                             <td class="border text-center">
                                 @php
-                                $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                $overall_ts_01 = $overall_ts_01 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO1 = 0;
                                 $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
                                 foreach ($course1->students->where('user_id', Auth()->id())->where('year',$year) as $student) {
@@ -82,7 +92,9 @@
 
                             @endphp
                                 {{ number_format($resultPO1,2) }}%</td>
-                            <td class="border text-center"> @php
+                            <td class="border text-center">
+                                @php
+                                  $overall_ts_02 = $overall_ts_02 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO2 = 0;
                                 $T_studentPassedPO2 = $course1->students->where('user_id', Auth()->id())->where('PO2', '>', 0)->count();
                                 foreach ($course1->students->where('user_id', Auth()->id())->where('year',$year) as $student) {
@@ -98,7 +110,9 @@
                             @endphp
                                 {{ number_format($resultPO2,2) }}%</td>
 
-                            <td class="border text-center"> @php
+                            <td class="border text-center">
+                                 @php
+                                   $overall_ts_03 = $overall_ts_03 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO3 = 0;
                                 $T_studentPassedPO3 = $course1->students->where('user_id', Auth()->id())->where('PO3', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -115,6 +129,7 @@
                                 {{ number_format($resultPO3,2) }}%</td>
                             </td>
                             <td class="border text-center">@php
+                                  $overall_ts_04 = $overall_ts_04 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO4 = 0;
                                 $T_studentPassedPO4 = $course1->students->where('user_id', Auth()->id())->where('PO4', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -129,7 +144,9 @@
                                 }
                             @endphp
                                 {{ number_format($resultPO4,2) }}%</td>
-                            <td class="border text-center">@php
+                            <td class="border text-center">
+                                @php
+                                  $overall_ts_05 = $overall_ts_05 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO5 = 0;
                                 $T_studentPassedPO5 = $course1->students->where('user_id', Auth()->id())->where('PO5', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -144,7 +161,9 @@
                                 }
                             @endphp
                                 {{ number_format($resultPO5,2) }}%</td>
-                            <td class="border text-center">@php
+                            <td class="border text-center">
+                                @php
+                                  $overall_ts_06 = $overall_ts_06 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO6 = 0;
                                 $T_studentPassedPO6 = $course1->students->where('user_id', Auth()->id())->where('PO6', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -159,7 +178,9 @@
                                 }
                             @endphp
                                 {{ number_format($resultPO6,2) }}%</td>
-                            <td class="border text-center">@php
+                            <td class="border text-center">
+                                @php
+                                  $overall_ts_07 = $overall_ts_07 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO7 = 0;
                                 $T_studentPassedPO7 = $course1->students->where('user_id', Auth()->id())->where('PO7', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -174,7 +195,9 @@
                                 }
                             @endphp
                                 {{ number_format($resultPO7,2) }}%</td>
-                            <td class="border text-center">@php
+                            <td class="border text-center">
+                                @php
+                                  $overall_ts_08 = $overall_ts_08 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO8 = 0;
                                 $T_studentPassedPO8 = $course1->students->where('user_id', Auth()->id())->where('PO8', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -189,7 +212,9 @@
                                 }
                             @endphp
                                 {{  number_format($resultPO8,2) }}%</td>
-                            <td class="border text-center">@php
+                            <td class="border text-center">
+                                @php
+                                  $overall_ts_09 = $overall_ts_09 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO9 = 0;
                                 $T_studentPassedPO9 = $course1->students->where('user_id', Auth()->id())->where('PO9', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -204,7 +229,9 @@
                                 }
                             @endphp
                                 {{  number_format($resultPO9,2) }}%</td>
-                            <td class="border text-center">@php
+                            <td class="border text-center">
+                                @php
+                                  $overall_ts_10 = $overall_ts_10 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO10 = 0;
                                 $T_studentPassedPO10 = $course1->students->where('user_id', Auth()->id())->where('PO10', '>', 0)->count();
                                 foreach ($course1->students as $student) {
