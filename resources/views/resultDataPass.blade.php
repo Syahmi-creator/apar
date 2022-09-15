@@ -11,6 +11,16 @@
         @php
             $overall_ts = 0;
             $PO1_calculation = 0;
+            $PO2_calculation = 0;
+            $PO3_calculation = 0;
+            $PO4_calculation = 0;
+            $PO5_calculation = 0;
+            $PO6_calculation = 0;
+            $PO7_calculation = 0;
+            $PO8_calculation = 0;
+            $PO9_calculation = 0;
+            $PO10_calculation = 0;
+
         @endphp
 
         <table class="table table-responsive">
