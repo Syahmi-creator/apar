@@ -18,7 +18,7 @@
             $overall_ts_07 = 0;
             $overall_ts_08 = 0;
             $overall_ts_09 = 0;
-            $overall_ts_010 = 0;
+            $overall_ts_10 = 0;
 
             $PO1_calculation = 0;
             $PO2_calculation = 0;
@@ -253,70 +253,70 @@
                             <td colspan="4">Total Score </td>
                             <td>
                                 @php
-                                  $latestKPIPO1 = ($PO1_calculation / $overall_ts)*100;
+                                  $latestKPIPO1 = ($PO1_calculation / $overall_ts_01)*100;
                     @endphp
                     {{number_format($latestKPIPO1,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO2 = ($PO2_calculation / $overall_ts)*100;
+                                  $latestKPIPO2 = ($PO2_calculation / $overall_ts_02)*100;
                     @endphp
                     {{number_format($latestKPIPO2,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO3 = ($PO3_calculation / $overall_ts)*100;
+                                  $latestKPIPO3 = ($PO3_calculation / $overall_ts_03)*100;
                     @endphp
                     {{number_format($latestKPIPO3,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO4 = ($PO4_calculation / $overall_ts)*100;
+                                  $latestKPIPO4 = ($PO4_calculation / $overall_ts_04)*100;
                     @endphp
                     {{number_format($latestKPIPO4,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO5 = ($PO5_calculation / $overall_ts)*100;
+                                  $latestKPIPO5 = ($PO5_calculation / $overall_ts_05)*100;
                     @endphp
                     {{number_format($latestKPIPO5,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO6 = ($PO6_calculation / $overall_ts)*100;
+                                  $latestKPIPO6 = ($PO6_calculation / $overall_ts_06)*100;
                     @endphp
                     {{number_format($latestKPIPO6,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO7 = ($PO7_calculation / $overall_ts)*100;
+                                  $latestKPIPO7 = ($PO7_calculation / $overall_ts_07)*100;
                     @endphp
                     {{number_format($latestKPIPO7,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO8 = ($PO8_calculation / $overall_ts)*100;
+                                  $latestKPIPO8 = ($PO8_calculation / $overall_ts_08)*100;
                     @endphp
                     {{number_format($latestKPIPO8,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO9 = ($PO9_calculation / $overall_ts)*100;
+                                  $latestKPIPO9 = ($PO9_calculation / $overall_ts_09)*100;
                     @endphp
                     {{number_format($latestKPIPO9,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO10 = ($PO10_calculation / $overall_ts)*100;
+                                  $latestKPIPO10 = ($PO10_calculation / $overall_ts_10)*100;
                     @endphp
                     {{number_format($latestKPIPO10,2)}}%
 
