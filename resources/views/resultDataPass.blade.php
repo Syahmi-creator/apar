@@ -74,7 +74,7 @@
                                 {{ $course1->students->where('user_id', Auth()->id())->where('year',$year)->count() }}</td>
                             <td class="border text-center">
                                 @php
-                                $overall_ts_01 = $overall_ts_01 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO1 = 0;
                                 $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
                                 foreach ($course1->students->where('user_id', Auth()->id())->where('year',$year) as $student) {
@@ -94,7 +94,7 @@
                                 {{ number_format($resultPO1,2) }}%</td>
                             <td class="border text-center">
                                 @php
-                                  $overall_ts_02 = $overall_ts_02 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                  $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO2 = 0;
                                 $T_studentPassedPO2 = $course1->students->where('user_id', Auth()->id())->where('PO2', '>', 0)->count();
                                 foreach ($course1->students->where('user_id', Auth()->id())->where('year',$year) as $student) {
@@ -112,7 +112,7 @@
 
                             <td class="border text-center">
                                  @php
-                                   $overall_ts_03 = $overall_ts_03 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                   $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO3 = 0;
                                 $T_studentPassedPO3 = $course1->students->where('user_id', Auth()->id())->where('PO3', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -129,7 +129,7 @@
                                 {{ number_format($resultPO3,2) }}%</td>
                             </td>
                             <td class="border text-center">@php
-                                  $overall_ts_04 = $overall_ts_04 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                  $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO4 = 0;
                                 $T_studentPassedPO4 = $course1->students->where('user_id', Auth()->id())->where('PO4', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -146,7 +146,7 @@
                                 {{ number_format($resultPO4,2) }}%</td>
                             <td class="border text-center">
                                 @php
-                                  $overall_ts_05 = $overall_ts_05 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                  $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO5 = 0;
                                 $T_studentPassedPO5 = $course1->students->where('user_id', Auth()->id())->where('PO5', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -163,7 +163,7 @@
                                 {{ number_format($resultPO5,2) }}%</td>
                             <td class="border text-center">
                                 @php
-                                  $overall_ts_06 = $overall_ts_06 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                  $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO6 = 0;
                                 $T_studentPassedPO6 = $course1->students->where('user_id', Auth()->id())->where('PO6', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -180,7 +180,7 @@
                                 {{ number_format($resultPO6,2) }}%</td>
                             <td class="border text-center">
                                 @php
-                                  $overall_ts_07 = $overall_ts_07 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                  $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO7 = 0;
                                 $T_studentPassedPO7 = $course1->students->where('user_id', Auth()->id())->where('PO7', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -197,7 +197,7 @@
                                 {{ number_format($resultPO7,2) }}%</td>
                             <td class="border text-center">
                                 @php
-                                  $overall_ts_08 = $overall_ts_08 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                  $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO8 = 0;
                                 $T_studentPassedPO8 = $course1->students->where('user_id', Auth()->id())->where('PO8', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -214,7 +214,7 @@
                                 {{  number_format($resultPO8,2) }}%</td>
                             <td class="border text-center">
                                 @php
-                                  $overall_ts_09 = $overall_ts_09 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                  $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO9 = 0;
                                 $T_studentPassedPO9 = $course1->students->where('user_id', Auth()->id())->where('PO9', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -231,7 +231,7 @@
                                 {{  number_format($resultPO9,2) }}%</td>
                             <td class="border text-center">
                                 @php
-                                  $overall_ts_10 = $overall_ts_10 + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                  $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
                                 $PO10 = 0;
                                 $T_studentPassedPO10 = $course1->students->where('user_id', Auth()->id())->where('PO10', '>', 0)->count();
                                 foreach ($course1->students as $student) {
@@ -253,70 +253,70 @@
                             <td colspan="4">Total Score </td>
                             <td>
                                 @php
-                                  $latestKPIPO1 = ($PO1_calculation / $overall_ts_01)*100;
+                                  $latestKPIPO1 = ($PO1_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO1,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO2 = ($PO2_calculation / $overall_ts_02)*100;
+                                  $latestKPIPO2 = ($PO2_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO2,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO3 = ($PO3_calculation / $overall_ts_03)*100;
+                                  $latestKPIPO3 = ($PO3_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO3,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO4 = ($PO4_calculation / $overall_ts_04)*100;
+                                  $latestKPIPO4 = ($PO4_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO4,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO5 = ($PO5_calculation / $overall_ts_05)*100;
+                                  $latestKPIPO5 = ($PO5_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO5,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO6 = ($PO6_calculation / $overall_ts_06)*100;
+                                  $latestKPIPO6 = ($PO6_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO6,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO7 = ($PO7_calculation / $overall_ts_07)*100;
+                                  $latestKPIPO7 = ($PO7_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO7,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO8 = ($PO8_calculation / $overall_ts_08)*100;
+                                  $latestKPIPO8 = ($PO8_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO8,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO9 = ($PO9_calculation / $overall_ts_09)*100;
+                                  $latestKPIPO9 = ($PO9_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO9,2)}}%
 
                             </td>
                             <td>
                                 @php
-                                  $latestKPIPO10 = ($PO10_calculation / $overall_ts_10)*100;
+                                  $latestKPIPO10 = ($PO10_calculation / $overall_ts)*100;
                     @endphp
                     {{number_format($latestKPIPO10,2)}}%
 
