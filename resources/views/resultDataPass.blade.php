@@ -221,6 +221,69 @@
                     {{number_format($latestKPIPO1,2)}}%
 
                             </td>
+                            <td>
+                                @php
+                                  $latestKPIPO2 = ($PO2_calculation / $overall_ts)*100;
+                    @endphp
+                    {{number_format($latestKPIPO2,2)}}%
+
+                            </td>
+                            <td>
+                                @php
+                                  $latestKPIPO3 = ($PO3_calculation / $overall_ts)*100;
+                    @endphp
+                    {{number_format($latestKPIPO3,2)}}%
+
+                            </td>
+                            <td>
+                                @php
+                                  $latestKPIPO4 = ($PO4_calculation / $overall_ts)*100;
+                    @endphp
+                    {{number_format($latestKPIPO4,2)}}%
+
+                            </td>
+                            <td>
+                                @php
+                                  $latestKPIPO5 = ($PO5_calculation / $overall_ts)*100;
+                    @endphp
+                    {{number_format($latestKPIPO5,2)}}%
+
+                            </td>
+                            <td>
+                                @php
+                                  $latestKPIPO6 = ($PO6_calculation / $overall_ts)*100;
+                    @endphp
+                    {{number_format($latestKPIPO6,2)}}%
+
+                            </td>
+                            <td>
+                                @php
+                                  $latestKPIPO7 = ($PO7_calculation / $overall_ts)*100;
+                    @endphp
+                    {{number_format($latestKPIPO7,2)}}%
+
+                            </td>
+                            <td>
+                                @php
+                                  $latestKPIPO8 = ($PO8_calculation / $overall_ts)*100;
+                    @endphp
+                    {{number_format($latestKPIPO8,2)}}%
+
+                            </td>
+                            <td>
+                                @php
+                                  $latestKPIPO9 = ($PO9_calculation / $overall_ts)*100;
+                    @endphp
+                    {{number_format($latestKPIPO9,2)}}%
+
+                            </td>
+                            <td>
+                                @php
+                                  $latestKPIPO10 = ($PO10_calculation / $overall_ts)*100;
+                    @endphp
+                    {{number_format($latestKPIPO10,2)}}%
+
+                            </td>
 
                           </tr>
                           <tr>
@@ -247,6 +310,7 @@
                             </td>
 
                           </tr>
+
 
 
 
