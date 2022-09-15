@@ -257,7 +257,7 @@
                                   $latestKPIPO1 = ($PO1_calculation / $overall_ts)*100;
                     @endphp --}}
                     {{-- {{number_format($latestKPIPO1,2)}}% --}}
-                    {{$latestKPIPO1}}
+                    {{$PO1_calculation}}
                             </td>
                             <td>
                                 @php
