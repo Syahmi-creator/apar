@@ -264,7 +264,7 @@
                     {{-- {{number_format($latestKPIPO1,2)}}% --}}
                     {{$PO1_calculation}}
                     <br>
-                    {{$overall_studentTaken}}
+                    {{$overall_ts}}
                             </td>
                             <td>
                                 @php
