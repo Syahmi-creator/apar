@@ -64,10 +64,14 @@
                             <td class="border text-center">{{ $course1->course }}</td>
                             {{-- <td class="border text-center">{{ $course1->credit_hour }}</td> --}}
                             <td class="border text-center">
+                                @php
+                                    $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                                    $overall_studentTaken += $overall_ts;
+                                @endphp
                                 {{ $course1->students->where('user_id', Auth()->id())->where('year',$year)->count() }}</td>
                             <td class="border text-center">
                                 @php
-                                $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+
                                 $PO1 = 0;
                                 $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
                                 foreach ($course1->students->where('user_id', Auth()->id())->where('year',$year) as $student) {
@@ -248,9 +252,6 @@
                             @endphp
                                 {{  number_format($resultPO10,2) }}%</td>
                         </tr>
-                        @php
-                            $overall_studentTaken += $overall_ts;
-                        @endphp
                         @endif
                         @endforeach
                         <tr>
