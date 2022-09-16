@@ -54,6 +54,10 @@
                     $i = 1;
                 @endphp
                 @foreach ($courses as $course1)
+                @php
+                $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
+                $overall_studentTaken += $overall_ts;
+                @endphp
                     @if ($course1->students->where('user_id', Auth()->id())->count() > 0)
                         <tr>
                             <td class="border text-center">{{ $i++ }}</td>
@@ -64,10 +68,7 @@
                             <td class="border text-center">{{ $course1->course }}</td>
                             {{-- <td class="border text-center">{{ $course1->credit_hour }}</td> --}}
                             <td class="border text-center">
-                                @php
-                                    $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
-                                    $overall_studentTaken += $overall_ts;
-                                @endphp
+
                                 {{ $course1->students->where('user_id', Auth()->id())->where('year',$year)->count() }}</td>
                             <td class="border text-center">
                                 @php
