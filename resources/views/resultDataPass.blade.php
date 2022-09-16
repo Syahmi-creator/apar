@@ -258,13 +258,13 @@
                         <tr>
                             <td colspan="4">Total Score </td>
                             <td>
-                                {{-- @php
+                                @php
                                   $latestKPIPO1 = ($PO1_calculation / $overall_ts)*100;
-                    @endphp --}}
-                    {{-- {{number_format($latestKPIPO1,2)}}% --}}
-                    {{$PO1_calculation}}
+                    @endphp
+                    {{number_format($latestKPIPO1,2)}}%
+                    {{-- {{$PO1_calculation}}
                     <br>
-                    {{$overall_ts}}
+                    {{$overall_ts}} --}}
                             </td>
                             <td>
                                 @php
@@ -340,7 +340,7 @@
                           <tr>
                             <td colspan="4">Achievement (YES or No)</td>
                             <td>
-                                {{-- @php
+                                @php
                                 $PO1_KPI = number_format($latestKPIPO1,2);
 
                                 if ($PO1_KPI > 65)
@@ -350,7 +350,7 @@
                                     $PO1_KPI_achievement = "NO";
                                 }
                     @endphp
-                    {{$PO1_KPI_achievement}} --}}
+                    {{$PO1_KPI_achievement}}
 
                             </td>
                             <td>
