@@ -56,7 +56,7 @@
                 @foreach ($courses as $course1)
                 @php
                 $overall_ts = $overall_ts + $course1->students->where('user_id', Auth()->id())->where('year',$year)->count();
-                $overall_studentTaken += $overall_ts;
+                // $overall_studentTaken += $overall_ts;
                 @endphp
                     @if ($course1->students->where('user_id', Auth()->id())->count() > 0)
                         <tr>
