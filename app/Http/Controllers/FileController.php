@@ -104,6 +104,11 @@ class FileController extends Controller
 
                 $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
                 $firstStudent = $course1->students->where('user_id', Auth()->id())->first();
+                if($firstStudent != null){
+                    $file_id = $firstStudent->file_id;
+                }else{
+                    $file_id = null;
+                }
                 foreach ($course1->students as $student) {
                     if ($student->PO1 >= 65.0) {
                         $PO1++;
@@ -119,7 +124,7 @@ class FileController extends Controller
                 $new = StudentKPI::create([
                     'course' => $course1->course,
                     'kpi_PO1' => $resultPO1,
-                    'file_id' => $firstStudent->file_id,
+                    'file_id' => $file_id,
                     'user_id' => Auth()->id(),
                 ]);
 
