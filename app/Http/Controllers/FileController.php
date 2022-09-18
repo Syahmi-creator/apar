@@ -85,21 +85,22 @@ class FileController extends Controller
             //select all data
             $students = Student::all();
             $courses = Course::all();
-            $PO1 = 0;
-            $PO2 = 0;
-            $PO3 = 0;
-            $PO4 = 0;
-            $PO5 = 0;
-            $PO6 = 0;
-            $PO7 = 0;
-            $PO8 = 0;
-            $PO9 = 0;
-            $PO10 = 0;
-            $i = 1;
+
             foreach ($courses as $course1)
             {
-                dump($course1->course);
-                dump($course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count());
+                $PO1 = 0;
+                $PO2 = 0;
+                $PO3 = 0;
+                $PO4 = 0;
+                $PO5 = 0;
+                $PO6 = 0;
+                $PO7 = 0;
+                $PO8 = 0;
+                $PO9 = 0;
+                $PO10 = 0;
+                $i = 1;
+                // dump($course1->course);
+                // dump($course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count());
 
                 $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
                 foreach ($course1->students as $student) {
@@ -263,7 +264,7 @@ class FileController extends Controller
                 ]);
             }
         }
-        dd("done");
+        // dd("done");
         return back()
             ->with('success','File has been uploaded.');
     }
