@@ -112,7 +112,7 @@ class FileController extends Controller
                 }
 
                 $new = StudentKPI::create([
-                    'course' => $sub,
+                    'course' => $course1->course,
                     'kpi_PO1' => $resultPO1
                 ]);
 
