@@ -98,6 +98,9 @@ class FileController extends Controller
             $i = 1;
             foreach ($courses as $course1)
             {
+                dump($course1->course);
+                dump($course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count());
+
                 $T_studentPassedPO1 = $course1->students->where('user_id', Auth()->id())->where('PO1', '>', 0)->count();
                 foreach ($course1->students as $student) {
                     if ($student->PO1 >= 65.0) {
