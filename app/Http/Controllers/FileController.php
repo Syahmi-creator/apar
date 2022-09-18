@@ -85,16 +85,16 @@ class FileController extends Controller
             //select all data
             $students = Student::all();
             $courses = Course::all();
-            $TPO1 = 0;
-            $TPO2 = 0;
-            $TPO3 = 0;
-            $TPO4 = 0;
-            $TPO5 = 0;
-            $TPO6 = 0;
-            $TPO7 = 0;
-            $TPO8 = 0;
-            $TPO9 = 0;
-            $TPO10 = 0;
+            $PO1 = 0;
+            $PO2 = 0;
+            $PO3 = 0;
+            $PO4 = 0;
+            $PO5 = 0;
+            $PO6 = 0;
+            $PO7 = 0;
+            $PO8 = 0;
+            $PO9 = 0;
+            $PO10 = 0;
             $i = 1;
             foreach ($courses as $course1)
             {
