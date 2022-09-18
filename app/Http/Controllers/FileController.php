@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\File;
 use App\Models\Image;
+use App\Models\Student;
+use App\Models\Course;
 use App\Exports\ExcelTableExport;
 use App\Imports\StudentImport;
 use App\Imports\SpaceStudentImport;
