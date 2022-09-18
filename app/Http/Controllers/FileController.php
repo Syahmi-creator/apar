@@ -263,7 +263,7 @@ class FileController extends Controller
                 ]);
             }
         }
-
+        dd("done");
         return back()
             ->with('success','File has been uploaded.');
     }
