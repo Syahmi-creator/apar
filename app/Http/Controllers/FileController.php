@@ -106,8 +106,10 @@ class FileController extends Controller
                 $firstStudent = $course1->students->where('user_id', Auth()->id())->first();
                 if($firstStudent != null){
                     $file_id = $firstStudent->file_id;
+                    $user_id = Auth()->id();
                 }else{
                     $file_id = null;
+                    $user_id = null;
                 }
                 foreach ($course1->students as $student) {
                     if ($student->PO1 >= 65.0) {
@@ -125,7 +127,7 @@ class FileController extends Controller
                     'course' => $course1->course,
                     'kpi_PO1' => $resultPO1,
                     'file_id' => $file_id,
-                    'user_id' => Auth()->id(),
+                    'user_id' => $user_id,
                 ]);
 
                 $T_studentPassedPO2 = $course1->students->where('user_id', Auth()->id())->where('PO2', '>', 0)->count();
