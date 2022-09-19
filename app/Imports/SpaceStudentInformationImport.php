@@ -17,6 +17,12 @@ class StudentInformationImport implements ToModel
     protected $formFileId;
     protected $userId;
 
+    function __construct($formFileId) {
+        // function __construct($fileId, $userId) {
+            $this->formFileId = $formFileId;
+            // $this->userId = $userId;
+        }
+
     public function model(array $row)
     {
         return new StudentInformation([

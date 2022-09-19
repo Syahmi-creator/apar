@@ -18,14 +18,14 @@ class StudentGraduateController extends Controller
     {
        return view('file-import');
     }
-   public function uploadStudentGraduates(Request $request)
+
+   public function fileExport()
+   {
+       return Excel::download(new ExcelStudentInformationExport, 'graduationsession.xlsx');
+   }
+    public function uploadStudentGraduates(Request $request)
    {
     Excel::import(new StudentInformationImport, $request->file('file'));
     return redirect()->route('dashboard')->with('success', 'Student Information Import Successfully');
    }
-   public function fileExport()
-   {
-       return Excel::download(new UsersExport, 'users-collection.xlsx');
-   }
-
 }
