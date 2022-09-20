@@ -46,12 +46,13 @@ class HomeController extends Controller
 
     public function store(Request $request){
 
+        $user_id = Auth()->id();
         $informations = Information::create(
             [
                 'graduation_session' => $request-> graduation_session,
                 'graduation_semester' => $request-> graduation_semester,
                 'total_student' => $request-> total_student,
-                'user_id' => $request -> $user_id = Auth()->id(),
+                'user_id' => $user_id
 
                 //'formFile' => $request-> formFile
             ]
