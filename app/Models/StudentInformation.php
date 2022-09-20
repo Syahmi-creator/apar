@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class StudentInformation extends Model
 {
     use HasFactory;
+    public function studentfile()
+    {
+        return $this->belongsTo(StudentFile::class);
+    }
 
     protected $fillable = [
         'id',
