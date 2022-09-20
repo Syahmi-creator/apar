@@ -73,6 +73,16 @@ class HomeController extends Controller
                 'formFile' => $formFile
             ]
             );
+
+            $studentfile = StudentFile::create(
+                [
+                    'name' => $formFile,
+                    'file_path' => $filePath,
+                    'user_id' => $user_id
+
+                ]
+                );
+
     }
     public function fileImportExport()
     {

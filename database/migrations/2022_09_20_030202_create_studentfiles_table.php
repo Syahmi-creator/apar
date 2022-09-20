@@ -17,7 +17,6 @@ class CreateStudentfilesTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('file_path')->nullable();
-            $table->string('excel_path')->nullable();
             $table->foreignId('user_id')->nullable();
             $table->timestamps();
         });

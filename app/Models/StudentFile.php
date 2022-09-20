@@ -12,6 +12,6 @@ class StudentFile extends Model
 
     public function students()
     {
-        return $this->hasMany(StudentInformation::class, 'formFile', 'id');
+        return $this->hasMany(StudentInformation::class, 'formFile', 'name');
     }
 }
