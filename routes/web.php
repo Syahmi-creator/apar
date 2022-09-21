@@ -20,7 +20,7 @@ use App\Http\Controllers\StudentController;
 Route::get('/', [HomeController::class, 'redirectLogin'])->middleware(['auth'])->name('redirectLogin');
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 Route::post('/dashboard/store', [HomeController::class, 'store'])->middleware(['auth'])->name('dashboard.store');
-Route::get('/dashboard/file-import-export', [HomeController::class, 'uploadStudentGraduates']);
+// Route::get('/dashboard/file-import-export', [HomeController::class, 'uploadStudentGraduates']);
 Route::post('/dashboard/file-import', [HomeController::class, 'fileImport'])->middleware(['auth'])->name('dashboard.file-import');
 Route::get('/dashboard/file-export', [HomeController::class, 'fileExport'])->middleware(['auth'])->name('dashboard.file-export');
 Route::get('/file', [HomeController::class, 'file'])->middleware(['auth'])->name('file');

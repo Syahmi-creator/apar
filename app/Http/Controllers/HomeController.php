@@ -47,21 +47,6 @@ class HomeController extends Controller
 
     public function store(Request $req){
 
-        $req->validate([
-            'file' => 'required|mimes:xlx,xls|max:2048'
-            ]);
-            $fileModel = new File;
-            if($req->file()) {
-                $fileName = time().'_'.$req->file->getClientOriginalName();
-                $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
-                $fileModel->name = time().'_'.$req->file->getClientOriginalName();
-                $fileModel->file_path = '/storage/' . $filePath;
-                $fileModel->save();
-                return back()
-                ->with('success','File has been uploaded.')
-                ->with('file', $fileName);
-            }
-
         $formFile = $fileName;
         $user_id = Auth()->id();
         $informations = Information::create(
@@ -82,6 +67,22 @@ class HomeController extends Controller
 
                 ]
                 );
+        $req->validate([
+            'file' => 'required|mimes:xlx,xls|max:2048'
+            ]);
+            $fileModel = new File;
+            if($req->file()) {
+                $fileName = time().'_'.$req->file->getClientOriginalName();
+                $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
+                $fileModel->name = time().'_'.$req->file->getClientOriginalName();
+                $fileModel->file_path = '/storage/' . $filePath;
+                $fileModel->save();
+                return back()
+                ->with('success','File has been uploaded.')
+                ->with('file', $fileName);
+            }
+
+
 
     }
     public function fileImportExport()
