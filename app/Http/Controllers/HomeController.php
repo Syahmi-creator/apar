@@ -51,8 +51,10 @@ class HomeController extends Controller
             'file' => 'required|mimes:xlx,xls|max:2048'
             ]);
             $fileModel = new File;
+            $user_id = Auth()->id();
             if($req->file()) {
                 $fileName = time().'_'.$req->file->getClientOriginalName();
+                $formFile = $fileName;
                 $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
                 $fileModel->name = time().'_'.$req->file->getClientOriginalName();
                 $fileModel->file_path = '/storage/' . $filePath;
@@ -60,18 +62,22 @@ class HomeController extends Controller
                 return back()
                 ->with('success','File has been uploaded.')
                 ->with('file', $fileName);
+
+                $informations = Information::create(
+                    [
+                        'graduation_session' => $request-> graduation_session,
+                        'graduation_semester' => $request-> graduation_semester,
+                        'total_student' => $request-> total_student,
+                        'user_id' => $user_id,
+
+                        'formFile' => $formFile
+
+
+                    ]
+                    );
+
             }
-        $formFile = $fileName;
-        $user_id = Auth()->id();
-        $informations = Information::create(
-            [
-                'graduation_session' => $request-> graduation_session,
-                'graduation_semester' => $request-> graduation_semester,
-                'total_student' => $request-> total_student,
-                'user_id' => $user_id,
-                'formFile' => $formFile
-            ]
-            );
+
 
             $studentfile = StudentFile::create(
                 [
