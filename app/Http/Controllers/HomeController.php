@@ -47,21 +47,21 @@ class HomeController extends Controller
 
     public function store(Request $req){
 
-        $req->validate([
-            'file' => 'required|mimes:xlx,xls|max:2048'
-            ]);
-            $fileModel = new File;
+        // $req->validate([
+        //     'file' => 'required|mimes:xlx,xls|max:2048'
+        //     ]);
+        //     $fileModel = new File;
             $user_id = Auth()->id();
-            if($req->file()) {
-                $fileName = time().'_'.$req->file->getClientOriginalName();
-                $formFile = $fileName;
-                $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
-                $fileModel->name = time().'_'.$req->file->getClientOriginalName();
-                $fileModel->file_path = '/storage/' . $filePath;
-                $fileModel->save();
-                return back()
-                ->with('success','File has been uploaded.')
-                ->with('file', $fileName);
+            // if($req->file()) {
+            //     $fileName = time().'_'.$req->file->getClientOriginalName();
+            //     $formFile = $fileName;
+            //     $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
+            //     $fileModel->name = time().'_'.$req->file->getClientOriginalName();
+            //     $fileModel->file_path = '/storage/' . $filePath;
+            //     $fileModel->save();
+            //     return back()
+            //     ->with('success','File has been uploaded.')
+            //     ->with('file', $fileName);
 
                 $informations = Information::create(
                     [
@@ -70,54 +70,52 @@ class HomeController extends Controller
                         'total_student' => $request-> total_student,
                         'user_id' => $user_id,
 
-                        'formFile' => $formFile
+                        //'formFile' => $formFile
 
 
                     ]
                     );
 
+                    $studentfile = StudentFile::create(
+                        [
+                            'name' => $formFile,
+                            'file_path' => $filePath,
+                            'user_id' => $user_id
+
+                        ]
+                        );
+
+
             }
 
+            public function fileImportExport()
+            {
+               return view('file-import');
+            }
 
-            $studentfile = StudentFile::create(
-                [
-                    'name' => $formFile,
-                    'file_path' => $filePath,
-                    'user_id' => $user_id
-
-                ]
-                );
+           public function fileExport()
+           {
+               return Excel::download(new ExcelStudentInformationExport, 'graduationsession.xlsx');
+           }
+        //     public function uploadStudentGraduates(Request $req)
+        //    {
+        //     $req->validate([
+        //         'file' => 'required|mimes:xlx,xls|max:2048'
+        //         ]);
+        //         $fileModel = new File;
+        //         if($req->file()) {
+        //             $fileName = time().'_'.$req->file->getClientOriginalName();
+        //             $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
+        //             $fileModel->name = time().'_'.$req->file->getClientOriginalName();
+        //             $fileModel->file_path = '/storage/' . $filePath;
+        //             $fileModel->save();
+        //             return back()
+        //             ->with('success','File has been uploaded.')
+        //             ->with('file', $fileName);
+        //         }
+        //     // Excel::import(new StudentInformationImport, $request->file('file')->store('temp'));
+        //     // return redirect()->route('dashboard')->with('success', 'Student Information Import Successfully');
+        //    }
 
 
     }
-    public function fileImportExport()
-    {
-       return view('file-import');
-    }
-
-   public function fileExport()
-   {
-       return Excel::download(new ExcelStudentInformationExport, 'graduationsession.xlsx');
-   }
-//     public function uploadStudentGraduates(Request $req)
-//    {
-//     $req->validate([
-//         'file' => 'required|mimes:xlx,xls|max:2048'
-//         ]);
-//         $fileModel = new File;
-//         if($req->file()) {
-//             $fileName = time().'_'.$req->file->getClientOriginalName();
-//             $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
-//             $fileModel->name = time().'_'.$req->file->getClientOriginalName();
-//             $fileModel->file_path = '/storage/' . $filePath;
-//             $fileModel->save();
-//             return back()
-//             ->with('success','File has been uploaded.')
-//             ->with('file', $fileName);
-//         }
-//     // Excel::import(new StudentInformationImport, $request->file('file')->store('temp'));
-//     // return redirect()->route('dashboard')->with('success', 'Student Information Import Successfully');
-//    }
-
-
-}
