@@ -47,27 +47,27 @@ class HomeController extends Controller
 
     public function store(Request $req){
 
-        // $req->validate([
-        //     'file' => 'required|mimes:xlx,xls|max:2048'
-        //     ]);
-        //     $fileModel = new File;
+        $req->validate([
+            'file' => 'required|mimes:xlx,xls|max:2048'
+            ]);
+            $fileModel = new File;
             $user_id = Auth()->id();
-            // if($req->file()) {
-            //     $fileName = time().'_'.$req->file->getClientOriginalName();
-            //     $formFile = $fileName;
-            //     $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
-            //     $fileModel->name = time().'_'.$req->file->getClientOriginalName();
-            //     $fileModel->file_path = '/storage/' . $filePath;
-            //     $fileModel->save();
-            //     return back()
-            //     ->with('success','File has been uploaded.')
-            //     ->with('file', $fileName);
+            if($req->file()) {
+                $fileName = time().'_'.$req->file->getClientOriginalName();
+                $formFile = $fileName;
+                $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
+                $fileModel->name = time().'_'.$req->file->getClientOriginalName();
+                $fileModel->file_path = '/storage/' . $filePath;
+                $fileModel->save();
+                return back()
+                ->with('success','File has been uploaded.')
+                ->with('file', $fileName);
 
                 $informations = Information::create(
                     [
-                        'graduation_session' => $request-> graduation_session,
-                        'graduation_semester' => $request-> graduation_semester,
-                        'total_student' => $request-> total_student,
+                        'graduation_session' => $req-> graduation_session,
+                        'graduation_semester' => $req-> graduation_semester,
+                        'total_student' => $req-> total_student,
                         'user_id' => $user_id,
 
                         //'formFile' => $formFile
@@ -87,7 +87,7 @@ class HomeController extends Controller
 
 
             }
-
+        }
             public function fileImportExport()
             {
                return view('file-import');
