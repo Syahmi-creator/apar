@@ -51,6 +51,7 @@ class HomeController extends Controller
             'formFile' => 'required|mimes:xlx,xlsx|max:2048'
         ]);
         if($req->file()) {
+            $filePath = $req->file('formFile')->storeAs('uploads', $fileName, 'public');
             $studentfile = StudentFile::create([
                 "name" => time().'_'.$req->formFile->getClientOriginalName(),
                 "file_path" => '/storage/' . $filePath,
