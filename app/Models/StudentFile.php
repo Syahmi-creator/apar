@@ -11,8 +11,16 @@ class StudentFile extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+         'name',
+        'file_path',
+       'user_id'
+     ];
+
     public function students()
     {
         return $this->hasMany(StudentInformation::class, 'formFile', 'name');
     }
+
+
 }
