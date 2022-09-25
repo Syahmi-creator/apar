@@ -14,7 +14,7 @@ class StudentInformation extends Model
     }
 
     protected $fillable = [
-        'id',
+
         'No',
         'Name',
         'IC',
