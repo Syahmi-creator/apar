@@ -46,6 +46,7 @@ class HomeController extends Controller
     }
 
     public function store(Request $req){
+        dd($req->all());
         $req->validate([
             'file' => 'required|mimes:xlx,xlsx|max:2048'
         ]);
