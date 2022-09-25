@@ -45,7 +45,7 @@
                             {{-- @csrf --}}
                         <div class="form-group">
                             <label for="formFile" class="form-label">Upload student file</label>
-                            <input class="form-control" type="file" id="formFile">
+                            <input class="form-control" type="file" name="formFile">
                         </div>
                         <br>
                         <button type="submit" class="btn btn-primary">Submit</button>
