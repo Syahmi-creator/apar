@@ -13,7 +13,7 @@ class CreateStudentfilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('studentfiles', function (Blueprint $table) {
+        Schema::create('student_files', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
             $table->string('file_path')->nullable();

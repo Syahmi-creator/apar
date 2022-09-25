@@ -68,7 +68,7 @@ class HomeController extends Controller
                 'graduation_session' => $req-> graduation_session,
                 'graduation_semester' => $req-> graduation_semester,
                 'total_student' => $req-> total_student,
-                'user_id' => $user_id,
+                'user_id' => Auth()->id(),
                 'formFile' => $studentfile->id
             ]
         );
