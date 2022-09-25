@@ -19,7 +19,7 @@ class CreateInformationsTable extends Migration
             $table->string('graduation_session');
             $table->string('graduation_semester');
             $table->string('total_student');
-            $table->string('formFile');
+            $table->integer('formFile');
             $table->foreignId('user_id')->nullable();
         });
     }
