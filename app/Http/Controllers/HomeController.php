@@ -87,25 +87,7 @@ class HomeController extends Controller
     {
         return Excel::download(new ExcelStudentInformationExport, 'graduationsession.xlsx');
     }
-        //     public function uploadStudentGraduates(Request $req)
-        //    {
-        //     $req->validate([
-        //         'file' => 'required|mimes:xlx,xls|max:2048'
-        //         ]);
-        //         $fileModel = new File;
-        //         if($req->file()) {
-        //             $fileName = time().'_'.$req->file->getClientOriginalName();
-        //             $filePath = $req->file('file')->storeAs('uploads', $fileName, 'public');
-        //             $fileModel->name = time().'_'.$req->file->getClientOriginalName();
-        //             $fileModel->file_path = '/storage/' . $filePath;
-        //             $fileModel->save();
-        //             return back()
-        //             ->with('success','File has been uploaded.')
-        //             ->with('file', $fileName);
-        //         }
-        //     // Excel::import(new StudentInformationImport, $request->file('file')->store('temp'));
-        //     // return redirect()->route('dashboard')->with('success', 'Student Information Import Successfully');
-        //    }
+
 
 
     }
