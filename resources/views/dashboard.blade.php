@@ -18,7 +18,7 @@
                     </div>
 
                 <div class="card-body">
-                    <form action="{{ route('dashboard.store') }}" method="POST">
+                    <form action="{{ route('dashboard.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="graduation_session">Graduation Session:</label>
@@ -41,8 +41,8 @@
                             <label for="total_student">Total number of students for this cohort:</label>
                             <input type="number" name="total_student" class="form-control" required>
                         </div>
-                        <form action="{{ route('dashboard.store') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
+                        {{-- <form action="{{ route('dashboard.store') }}" method="POST" enctype="multipart/form-data"> --}}
+                            {{-- @csrf --}}
                         <div class="form-group">
                             <label for="formFile" class="form-label">Upload student file</label>
                             <input class="form-control" type="file" id="formFile">
