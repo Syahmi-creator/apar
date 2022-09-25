@@ -46,13 +46,13 @@ class HomeController extends Controller
     }
 
     public function store(Request $req){
-        dd($req->all());
+        // dd($req->all());
         $req->validate([
-            'file' => 'required|mimes:xlx,xlsx|max:2048'
+            'formFile' => 'required|mimes:xlx,xlsx|max:2048'
         ]);
         if($req->file()) {
             $studentfile = StudentFile::create([
-                "name" => time().'_'.$req->file->getClientOriginalName(),
+                "name" => time().'_'.$req->formFile->getClientOriginalName(),
                 "file_path" => '/storage/' . $filePath,
                 "user_id" =>  Auth()->id()
             ]);
